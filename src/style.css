@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-sage-primary: #3A5A40;
+    --color-sage-dark: #2B4430;
+    --color-sage-light: #588157;
+    --color-sage-subtle: #E8EFE9;
+    --color-cream-bg: #FAF8F5;
+    --color-cream-card: #FFFFFF;
+    --color-warm-beige: #F3EEE7;
+    --color-terracotta: #C3775B;
+    --color-terracotta-hover: #AF6348;
+    --color-text-main: #243028;
+    --color-text-muted: #57655B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-cream-bg);
+    color: var(--color-text-main);
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Utilities & Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s infinite ease-in-out;
+}
+
+/* Glassmorphism Navigation */
+.nav-glass {
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Accordion Transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.25s ease-out, padding 0.35s ease-out;
+  opacity: 0;
+}
+
+.accordion-content.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Badge & Soft Shadow Styling */
+.soft-shadow {
+  box-shadow: 0 10px 30px -10px rgba(58, 90, 64, 0.08);
+}
+
+.soft-shadow-hover:hover {
+  box-shadow: 0 18px 40px -12px rgba(58, 90, 64, 0.14);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #A3B18A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A5A40;
+}
