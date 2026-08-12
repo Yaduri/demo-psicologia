@@ -7,6 +7,75 @@
   <meta name="description" content="Psicologia clínica ética, acolhedora e leve em Jundiaí - SP e Online. Terapia Cognitivo-Comportamental (TCC), ansiedade, autoestima e autoconhecimento. CRP 06/158942.">
   <meta name="keywords" content="Psicóloga Jundiaí, Psicologia Jundiaí, Terapia Online, TCC Jundiaí, Ansiedade, Psicóloga Aline Duarte">
   <meta name="author" content="Aline Duarte Psicologia">
+  <meta name="theme-color" content="#222A24">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://demo-psicologia-chi.vercel.app/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dra. Aline Duarte | Psicóloga Clínica">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://demo-psicologia-chi.vercel.app/">
+  <meta property="og:title" content="Dra. Aline Duarte | Psicóloga em Jundiaí - SP & Atendimento Online">
+  <meta property="og:description" content="Psicologia clínica ética, acolhedora e leve em Jundiaí - SP e Online. Terapia Cognitivo-Comportamental (TCC), ansiedade, autoestima e autoconhecimento. CRP 06/158942.">
+  <meta property="og:image" content="https://demo-psicologia-chi.vercel.app/images/aline-duarte.jpg">
+  <meta property="og:image:alt" content="Psicóloga Aline Duarte sorrindo em seu consultório em Jundiaí - SP">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dra. Aline Duarte | Psicóloga em Jundiaí - SP & Atendimento Online">
+  <meta name="twitter:description" content="Psicologia clínica ética, acolhedora e leve em Jundiaí - SP e Online. Terapia Cognitivo-Comportamental (TCC), ansiedade e autoconhecimento. CRP 06/158942.">
+  <meta name="twitter:image" content="https://demo-psicologia-chi.vercel.app/images/aline-duarte.jpg">
+
+  <!-- Structured Data: LocalBusiness + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Dra. Aline Duarte | Psicologia Clínica",
+    "image": "https://demo-psicologia-chi.vercel.app/images/aline-duarte.jpg",
+    "url": "https://demo-psicologia-chi.vercel.app/",
+    "description": "Psicologia clínica ética, acolhedora e leve em Jundiaí - SP e Online. Terapia Cognitivo-Comportamental (TCC), ansiedade, autoestima e autoconhecimento.",
+    "telephone": "+55-11-99999-9999",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jundiaí",
+      "addressRegion": "SP",
+      "addressCountry": "BR",
+      "streetAddress": "Chácara Urbana, próximo à Av. Nove de Julho"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.1893,
+      "longitude": -46.8929
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+55-11-99999-9999",
+      "availableLanguage": ["Portuguese"]
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Aline Duarte",
+      "jobTitle": "Psicóloga Clínica",
+      "description": "Psicóloga Clínica especializada em Terapia Cognitivo-Comportamental (TCC). Registro profissional CRP 06/158942."
+    }
+  }
+  </script>
+
+  <!-- Preload da imagem principal (LCP) -->
+  <link rel="preload" as="image" href="/images/aline-duarte.webp" type="image/webp">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,9 +209,13 @@
           <div class="lg:col-span-5">
             <div class="relative mx-auto max-w-md">
               <div class="overflow-hidden rounded-[2rem]">
-                <img src="/images/aline-duarte.jpg"
-                     alt="Psicóloga Aline Duarte sorrindo em seu consultório"
-                     class="w-full aspect-[4/5] object-cover">
+                <picture>
+                  <source srcset="/images/aline-duarte.webp" type="image/webp">
+                  <img src="/images/aline-duarte.jpg"
+                       alt="Psicóloga Aline Duarte sorrindo em seu consultório"
+                       class="w-full aspect-[4/5] object-cover"
+                       fetchpriority="high">
+                </picture>
               </div>
               <div class="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-ink/5 pointer-events-none"></div>
               <div class="mt-5 flex items-center justify-center gap-2.5 text-xs text-ink-soft">
@@ -220,7 +293,9 @@
                 <div>
                   <h3 class="font-heading text-xl font-semibold text-ink">Aline Duarte</h3>
                   <p class="text-xs font-semibold text-sage uppercase tracking-[0.14em] mt-0.5">Psicóloga Clínica</p>
-                  <p class="text-xs text-ink-soft mt-0.5">CRP 06/158942 · São Paulo</p>
+                  <p class="text-xs text-ink-soft mt-0.5">
+                  <a href="https://www.e-psi.cfp.org.br/" target="_blank" rel="noopener noreferrer" class="text-sage font-semibold hover:text-sage-dark underline decoration-sage/30 underline-offset-2">CRP 06/158942</a> · Registro verificável no CFP (e-PSI)
+                </p>
                 </div>
               </div>
 
@@ -439,9 +514,13 @@
             <div>
               <div>
                 <div class="relative overflow-hidden rounded-2xl">
-                  <img src="/images/consultorio-jundiai.jpg"
-                       alt="Consultório aconchegante de psicologia em Jundiaí SP"
-                       class="w-full h-72 sm:h-80 lg:h-[26rem] object-cover">
+                  <picture>
+                    <source srcset="/images/consultorio-jundiai.webp" type="image/webp">
+                    <img src="/images/consultorio-jundiai.jpg"
+                         alt="Consultório aconchegante de psicologia em Jundiaí SP"
+                         class="w-full h-72 sm:h-80 lg:h-[26rem] object-cover"
+                         loading="lazy">
+                  </picture>
                 </div>
                 <p class="mt-3 text-xs text-ink-soft">
                   <i class="fas fa-camera mr-1.5 text-sage"></i> Consultório em Jundiaí - SP
@@ -645,7 +724,7 @@
           <p class="text-white/50 max-w-sm leading-relaxed">
             Psicologia clínica com tom acolhedor, ético e fundamentado na Terapia Cognitivo-Comportamental. Atendimentos presenciais em Jundiaí - SP e online.
           </p>
-          <p class="text-white/50"><strong class="font-medium text-white/80">CRP:</strong> 06/158942</p>
+          <p class="text-white/50"><strong class="font-medium text-white/80">CRP:</strong> <a href="https://www.e-psi.cfp.org.br/" target="_blank" rel="noopener noreferrer" class="text-sage-tint hover:text-white underline decoration-white/25 underline-offset-2 transition-colors">06/158942</a> · verificável no e-PSI</p>
         </div>
 
         <div class="md:col-span-3 space-y-2.5">
@@ -670,6 +749,10 @@
       <div class="mt-10 p-5 rounded-xl bg-white/5 border border-white/10 text-white/50 leading-relaxed">
         <p>
           <strong class="text-white/70">Aviso ético:</strong> Este site possui caráter meramente informativo e de apresentação profissional, de acordo com a Resolução do Conselho Federal de Psicologia (CFP). Em caso de crise emocional intensa ou ideação suicida, busque ajuda imediata ligando para o <strong class="text-white/70">CVV (Centro de Valorização da Vida) no número 188</strong> (ligação gratuita 24h) ou dirija-se ao pronto-socorro mais próximo.
+        </p>
+        <p class="mt-3 pt-3 border-t border-white/10">
+          <i class="fas fa-shield-halved text-sage-tint mr-1.5"></i>
+          <strong class="text-white/70">Privacidade (LGPD):</strong> seus dados são tratados com total sigilo e utilizados exclusivamente para o agendamento e continuidade do atendimento, em conformidade com a Lei nº 13.709/2018.
         </p>
       </div>
 
