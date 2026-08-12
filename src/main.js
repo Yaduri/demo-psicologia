@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
-      navbar?.classList.add('shadow-sm', 'border-b', 'border-[#E8EFE9]');
+      navbar?.classList.add('shadow-sm', 'border-b', 'border-ink/10');
     } else {
-      navbar?.classList.remove('shadow-sm', 'border-b', 'border-[#E8EFE9]');
+      navbar?.classList.remove('shadow-sm', 'border-b', 'border-ink/10');
     }
   });
 
@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const icon = mobileMenuBtn.querySelector('i');
       if (icon) {
         if (mobileMenu.classList.contains('hidden')) {
-          icon.className = 'fas fa-bars text-xl text-[#3A5A40]';
+          icon.className = 'fas fa-bars text-xl text-ink';
         } else {
-          icon.className = 'fas fa-times text-xl text-[#3A5A40]';
+          icon.className = 'fas fa-times text-xl text-ink';
         }
       }
     });
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.add('hidden');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
         const icon = mobileMenuBtn.querySelector('i');
-        if (icon) icon.className = 'fas fa-bars text-xl text-[#3A5A40]';
+        if (icon) icon.className = 'fas fa-bars text-xl text-ink';
       });
     });
   }
@@ -78,15 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (tabPresencial && tabOnline && contentPresencial && contentOnline) {
     tabPresencial.addEventListener('click', () => {
-      tabPresencial.className = 'flex-1 py-3 px-6 text-center font-semibold rounded-full bg-[#3A5A40] text-white shadow-md transition-all duration-300 cursor-pointer';
-      tabOnline.className = 'flex-1 py-3 px-6 text-center font-semibold rounded-full text-[#3A5A40] hover:bg-[#E8EFE9] transition-all duration-300 cursor-pointer';
+      tabPresencial.className = 'flex-1 py-3 px-6 text-center text-sm font-semibold rounded-full bg-ink text-white shadow-sm transition-all duration-300 cursor-pointer';
+      tabOnline.className = 'flex-1 py-3 px-6 text-center text-sm font-semibold rounded-full text-ink-soft hover:bg-sage-tint transition-all duration-300 cursor-pointer';
       contentPresencial.classList.remove('hidden');
       contentOnline.classList.add('hidden');
     });
 
     tabOnline.addEventListener('click', () => {
-      tabOnline.className = 'flex-1 py-3 px-6 text-center font-semibold rounded-full bg-[#3A5A40] text-white shadow-md transition-all duration-300 cursor-pointer';
-      tabPresencial.className = 'flex-1 py-3 px-6 text-center font-semibold rounded-full text-[#3A5A40] hover:bg-[#E8EFE9] transition-all duration-300 cursor-pointer';
+      tabOnline.className = 'flex-1 py-3 px-6 text-center text-sm font-semibold rounded-full bg-ink text-white shadow-sm transition-all duration-300 cursor-pointer';
+      tabPresencial.className = 'flex-1 py-3 px-6 text-center text-sm font-semibold rounded-full text-ink-soft hover:bg-sage-tint transition-all duration-300 cursor-pointer';
       contentOnline.classList.remove('hidden');
       contentPresencial.classList.add('hidden');
     });

@@ -1,37 +1,41 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --color-sage-primary: #3A5A40;
-    --color-sage-dark: #2B4430;
-    --color-sage-light: #588157;
-    --color-sage-subtle: #E8EFE9;
-    --color-cream-bg: #FAF8F5;
-    --color-cream-card: #FFFFFF;
-    --color-warm-beige: #F3EEE7;
-    --color-terracotta: #C3775B;
-    --color-terracotta-hover: #AF6348;
-    --color-text-main: #243028;
-    --color-text-muted: #57655B;
-  }
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
 
+  --color-paper: #FBF9F6;
+  --color-ink: #222A24;
+  --color-ink-soft: #59615A;
+  --color-sage: #3F5C46;
+  --color-sage-dark: #2E4534;
+  --color-sage-tint: #EDF1EB;
+  --color-clay: #C6885F;
+}
+
+@layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--color-cream-bg);
-    color: var(--color-text-main);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, .font-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
   }
 }
 
-/* Custom Utilities & Animations */
+/* Gentle reveal for hero says */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -44,31 +48,31 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-pulse-slow {
   animation: pulseSlow 3s infinite ease-in-out;
 }
 
-/* Glassmorphism Navigation */
+/* Frosted navigation */
 .nav-glass {
-  background: rgba(250, 248, 245, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(251, 249, 246, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-/* Accordion Transition */
+/* Accordion */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-out, opacity 0.25s ease-out, padding 0.35s ease-out;
   opacity: 0;
+  transition: max-height 0.35s ease-out, opacity 0.25s ease-out;
 }
 
 .accordion-content.active {
@@ -76,26 +80,22 @@
   opacity: 1;
 }
 
-/* Badge & Soft Shadow Styling */
+/* Soft, restrained shadow for cards */
 .soft-shadow {
-  box-shadow: 0 10px 30px -10px rgba(58, 90, 64, 0.08);
+  box-shadow: 0 12px 30px -16px rgba(34, 42, 36, 0.12);
 }
 
-.soft-shadow-hover:hover {
-  box-shadow: 0 18px 40px -12px rgba(58, 90, 64, 0.14);
-}
-
-/* Custom Scrollbar */
+/* Minimal custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
+  background: #FBF9F6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #A3B18A;
+  background: #C4CCC6;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3A5A40;
+  background: #3F5C46;
 }
