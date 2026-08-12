@@ -16,6 +16,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     background-color: var(--color-paper);
     color: var(--color-ink);
   }
@@ -29,6 +30,21 @@
   h1, h2, h3, .font-heading {
     font-family: var(--font-heading);
   }
+
+  a, button, [role="button"], [tabindex]:not([tabindex="-1"]) {
+    outline: none;
+  }
+
+  :is(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Link ativo do scrollspy */
+.nav-link-active {
+  color: var(--color-sage);
 }
 
 /* Gentle reveal for hero says */
