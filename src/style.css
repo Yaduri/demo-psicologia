@@ -10,7 +10,7 @@
     --color-cream-card: #FFFFFF;
     --color-warm-beige: #F3EEE7;
     --color-terracotta: #C3775B;
-    --color-terracotta-hover: #AF6348;
+    --color-terracotta-dark: #AF6348;
     --color-text-main: #243028;
     --color-text-muted: #57655B;
 
@@ -36,6 +36,32 @@
   h1 { font-size: var(--font-h1); }
   h2 { font-size: var(--font-h2); }
   h3 { font-size: var(--font-h3); }
+}
+
+/* Preloader Splash Screen */
+#preloader {
+  transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s ease-out;
+  will-change: transform, opacity;
+}
+
+#preloader.preloader-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+@keyframes circlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(163, 177, 138, 0.4);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 16px rgba(163, 177, 138, 0);
+  }
+}
+
+.animate-circle-pulse {
+  animation: circlePulse 2.2s infinite ease-in-out;
 }
 
 /* Glassmorphism & Ambient Lighting */
@@ -91,17 +117,6 @@
   }
   50% {
     box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-  }
-}
-
-@keyframes slideUpFade {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -165,6 +180,9 @@
 
 /* Reduced Motion Accessibility */
 @media (prefers-reduced-motion: reduce) {
+  #preloader {
+    display: none !important;
+  }
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

@@ -18,6 +18,37 @@
 </head>
 <body class="bg-[#FAF8F5] text-[#243028] antialiased selection:bg-[#E8EFE9] selection:text-[#3A5A40] min-h-dvh flex flex-col justify-between">
 
+  <!-- PRELOADER SPLASH SCREEN REVEAL -->
+  <div id="preloader" class="fixed inset-0 z-50 bg-[#3A5A40] text-white flex flex-col items-center justify-center p-6 select-none">
+    <div class="flex flex-col items-center space-y-6 max-w-sm text-center">
+      
+      <!-- Pulsing Brand Monogram -->
+      <div class="relative w-24 h-24 rounded-full bg-[#2B4430] border-2 border-[#A3B18A]/60 flex items-center justify-center animate-circle-pulse shadow-2xl">
+        <span class="font-heading text-3xl font-bold tracking-tight text-[#FAF8F5]">AD</span>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <div class="space-y-1.5">
+        <h2 class="font-heading text-2xl font-bold tracking-tight text-[#FAF8F5]">Dra. Aline Duarte</h2>
+        <p class="text-xs font-medium text-emerald-200 uppercase tracking-widest">Psicologia Clínica • CRP 06/158942</p>
+      </div>
+
+      <!-- Soothing Message -->
+      <p class="text-xs text-emerald-100/80 italic font-serif">
+        "Cultivando equilíbrio, escuta e saúde mental"
+      </p>
+
+      <!-- Percentage Counter -->
+      <div class="pt-4 flex items-center gap-2">
+        <div class="w-24 h-1 bg-[#2B4430] rounded-full overflow-hidden">
+          <div class="h-full bg-[#A3B18A] transition-all duration-200" style="width: 100%;"></div>
+        </div>
+        <span id="preloader-counter" class="text-xs font-mono font-semibold text-emerald-200">0%</span>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Top Announcement Bar -->
   <div class="bg-[#3A5A40] text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium shadow-xs">
     <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
@@ -981,7 +1012,7 @@
       <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
          target="_blank" 
          rel="noopener noreferrer" 
-         class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3A5A40] text-white font-semibold text-xs shadow-md gap-2 touch-target">
+         class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3A5A40] text-[#FFFFFF] font-semibold text-xs shadow-md gap-2 touch-target">
         <i class="fab fa-whatsapp text-base text-[#25D366]"></i>
         <span>Agendar</span>
       </a>

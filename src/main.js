@@ -2,7 +2,52 @@ import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Scroll Header Elevation & Mobile Bottom Bar Visibility
+  // 1. PRELOADER SPLASH SCREEN REVEAL
+  const preloader = document.getElementById('preloader');
+  const preloaderCounter = document.getElementById('preloader-counter');
+
+  if (preloader && preloaderCounter) {
+    // Check if user has already seen preloader in this session for optimal UX
+    const hasSeenPreloader = sessionStorage.getItem('hasSeenPreloader');
+
+    if (hasSeenPreloader) {
+      preloader.style.display = 'none';
+      document.body.style.overflow = '';
+    } else {
+      document.body.style.overflow = 'hidden';
+      let progress = 0;
+      const duration = 1100; // 1.1s total count-up time
+      const intervalTime = 20;
+      const increment = 100 / (duration / intervalTime);
+
+      const counterInterval = setInterval(() => {
+        progress += increment;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(counterInterval);
+
+          preloaderCounter.textContent = '100%';
+
+          // Curtain Exit Animation
+          setTimeout(() => {
+            preloader.classList.add('preloader-hidden');
+            document.body.style.overflow = '';
+            sessionStorage.setItem('hasSeenPreloader', 'true');
+
+            // Trigger entrance animations for hero elements
+            document.querySelectorAll('#inicio .reveal-on-scroll').forEach(el => {
+              el.classList.add('is-visible');
+            });
+          }, 200);
+
+        } else {
+          preloaderCounter.textContent = `${Math.floor(progress)}%`;
+        }
+      }, intervalTime);
+    }
+  }
+
+  // 2. Scroll Header Elevation & Mobile Bottom Bar Visibility
   const navbar = document.getElementById('navbar');
   const mobileBottomCta = document.getElementById('mobile-bottom-cta');
 
@@ -15,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar?.classList.remove('shadow-md', 'border-b', 'border-[#E8EFE9]');
     }
 
-    // Show mobile bottom CTA bar after scrolling past hero (200px)
+    // Show mobile bottom CTA bar after scrolling past hero (250px)
     if (mobileBottomCta) {
       if (scrollY > 250) {
         mobileBottomCta.classList.remove('translate-y-full', 'opacity-0');
@@ -27,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2. Mobile Menu Toggle
+  // 3. Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
@@ -63,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Staggered Scroll Reveal (IntersectionObserver)
+  // 4. Staggered Scroll Reveal (IntersectionObserver)
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
 
   if ('IntersectionObserver' in window) {
@@ -88,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('is-visible'));
   }
 
-  // 4. FAQ Accordion
+  // 5. FAQ Accordion
   const accordionButtons = document.querySelectorAll('.faq-accordion-btn');
 
   accordionButtons.forEach(button => {
@@ -117,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Modality Switcher (Presencial Jundiaí / Online)
+  // 6. Modality Switcher (Presencial Jundiaí / Online)
   const tabPresencial = document.getElementById('tab-presencial');
   const tabOnline = document.getElementById('tab-online');
   const contentPresencial = document.getElementById('content-presencial');
@@ -139,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Interactive Demand Selector ("Como posso te ajudar?")
+  // 7. Interactive Demand Selector ("Como posso te ajudar?")
   const selectorButtons = document.querySelectorAll('.demand-selector-btn');
   const demandCards = document.querySelectorAll('.demand-card');
 
@@ -166,13 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Insurance Reimbursement Modal Controller
-  const openModalBtn = document.getElementById('open-reembolso-modal');
+  // 8. Insurance Reimbursement Modal Controller
+  const openModalBtns = document.querySelectorAll('#open-reembolso-modal');
   const closeModalBtn = document.getElementById('close-reembolso-modal');
   const reembolsoModal = document.getElementById('reembolso-modal');
   const modalBackdrop = document.getElementById('reembolso-modal-backdrop');
 
-  if (openModalBtn && closeModalBtn && reembolsoModal) {
+  if (reembolsoModal) {
     const openModal = () => {
       reembolsoModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
@@ -183,8 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     };
 
-    openModalBtn.addEventListener('click', openModal);
-    closeModalBtn.addEventListener('click', closeModal);
+    openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+    closeModalBtn?.addEventListener('click', closeModal);
     modalBackdrop?.addEventListener('click', closeModal);
 
     document.addEventListener('keydown', (e) => {
