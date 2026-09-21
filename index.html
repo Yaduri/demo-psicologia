@@ -2,83 +2,90 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#3A5A40">
   <title>Dra. Aline Duarte | Psicóloga em Jundiaí - SP & Atendimento Online</title>
   <meta name="description" content="Psicologia clínica ética, acolhedora e científica em Jundiaí - SP e Online. Terapia Cognitivo-Comportamental (TCC), manejo da ansiedade, burnout e autoconhecimento. CRP 06/158942.">
   <meta name="keywords" content="Psicóloga Jundiaí, Psicologia Jundiaí, Terapia Online, TCC Jundiaí, Ansiedade, Psicóloga Aline Duarte">
   <meta name="author" content="Dra. Aline Duarte Psicologia">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Lora (Headings) & Figtree (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-[#FAF8F5] text-[#243028] antialiased selection:bg-[#E8EFE9] selection:text-[#3A5A40] min-h-dvh flex flex-col justify-between">
+<body class="bg-[#FAF8F5] text-[#243028] antialiased selection:bg-[#DDE7E0] selection:text-[#243028] min-h-dvh flex flex-col justify-between">
 
-  <!-- PRELOADER SPLASH SCREEN REVEAL -->
-  <div id="preloader" class="fixed inset-0 z-50 bg-[#3A5A40] text-white flex flex-col items-center justify-center p-6 select-none">
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-[#3A5A40] focus:text-white focus:rounded-full focus:shadow-lg focus:outline-none">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- PRELOADER SPLASH SCREEN -->
+  <div id="preloader" class="fixed inset-0 z-50 bg-[#3A5A40] text-white flex flex-col items-center justify-center p-6 select-none" aria-hidden="true">
     <div class="flex flex-col items-center space-y-6 max-w-sm text-center">
       
-      <!-- Pulsing Brand Monogram -->
-      <div class="relative w-24 h-24 rounded-full bg-[#2B4430] border-2 border-[#A3B18A]/60 flex items-center justify-center animate-circle-pulse shadow-2xl">
-        <span class="font-heading text-3xl font-bold tracking-tight text-[#FAF8F5]">AD</span>
+      <!-- Brand Monogram -->
+      <div class="relative w-20 h-20 rounded-full bg-[#243B2A] border border-[#A3B18A]/50 flex items-center justify-center animate-circle-pulse shadow-lg">
+        <span class="font-heading text-2xl font-bold tracking-tight text-[#FAF8F5]">AD</span>
       </div>
 
       <!-- Title & Subtitle -->
-      <div class="space-y-1.5">
-        <h2 class="font-heading text-2xl font-bold tracking-tight text-[#FAF8F5]">Dra. Aline Duarte</h2>
-        <p class="text-xs font-medium text-emerald-200 uppercase tracking-widest">Psicologia Clínica • CRP 06/158942</p>
+      <div class="space-y-1">
+        <p class="font-heading text-xl font-bold tracking-tight text-[#FAF8F5]">Dra. Aline Duarte</p>
+        <p class="text-xs font-medium text-[#D8E6DC]">Psicologia Clínica • CRP 06/158942</p>
       </div>
 
       <!-- Soothing Message -->
-      <p class="text-xs text-emerald-100/80 italic font-serif">
+      <p class="text-xs text-[#D8E6DC]/90 font-serif italic max-w-xs leading-relaxed">
         "Cultivando equilíbrio, escuta e saúde mental"
       </p>
 
-      <!-- Percentage Counter -->
-      <div class="pt-4 flex items-center gap-2">
-        <div class="w-24 h-1 bg-[#2B4430] rounded-full overflow-hidden">
+      <!-- Progress Counter -->
+      <div class="pt-2 flex items-center gap-3">
+        <div class="w-28 h-1 bg-[#243B2A] rounded-full overflow-hidden">
           <div class="h-full bg-[#A3B18A] transition-all duration-200" style="width: 100%;"></div>
         </div>
-        <span id="preloader-counter" class="text-xs font-mono font-semibold text-emerald-200">0%</span>
+        <span id="preloader-counter" class="text-xs font-mono font-semibold text-[#D8E6DC] tabular-nums">0%</span>
       </div>
 
     </div>
   </div>
 
   <!-- Top Announcement Bar -->
-  <div class="bg-[#3A5A40] text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium shadow-xs">
+  <aside aria-label="Informações de atendimento" class="bg-[#3A5A40] text-white text-xs sm:text-sm py-2.5 px-4 sm:px-6 text-center font-medium">
     <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
-      <span class="inline-flex items-center gap-1.5"><i class="fas fa-location-dot text-[#A3B18A]"></i> Atendimento Presencial em <strong>Jundiaí - SP</strong></span>
-      <span class="hidden sm:inline text-[#A3B18A]">•</span>
-      <span class="inline-flex items-center gap-1.5"><i class="fas fa-laptop text-[#A3B18A]"></i> Consultas <strong>Online</strong> em todo o Brasil</span>
+      <span class="inline-flex items-center gap-1.5"><i class="fas fa-location-dot text-[#A3B18A]" aria-hidden="true"></i> Atendimento Presencial em <strong>Jundiaí - SP</strong> (Chácara Urbana)</span>
+      <span class="hidden sm:inline text-[#A3B18A]" aria-hidden="true">•</span>
+      <span class="inline-flex items-center gap-1.5"><i class="fas fa-laptop text-[#A3B18A]" aria-hidden="true"></i> Consultas <strong>Online</strong> para todo o Brasil</span>
     </div>
-  </div>
+  </aside>
 
   <!-- Header / Navigation -->
-  <header id="navbar" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+  <header id="navbar" class="sticky top-0 z-40 glass-nav transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Logo -->
-        <a href="#inicio" class="flex flex-col group touch-target">
-          <span class="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[#3A5A40] group-hover:text-[#2B4430] transition-colors">
+        <a href="#inicio" class="flex flex-col group touch-target focus-visible:outline-none" aria-label="Página inicial - Dra. Aline Duarte Psicóloga">
+          <span class="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[#3A5A40] group-hover:text-[#243B2A] transition-colors">
             Aline Duarte
           </span>
-          <span class="text-[11px] tracking-wider text-[#57655B] uppercase font-semibold">
+          <span class="text-xs text-[#4E5E53] font-semibold tabular-nums">
             Psicóloga • CRP 06/158942
           </span>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#243028]">
+        <nav aria-label="Navegação principal" class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#243028]">
           <a href="#sobre" class="hover:text-[#3A5A40] transition-colors py-2 border-b-2 border-transparent hover:border-[#3A5A40]">Sobre Mim</a>
           <a href="#demandas" class="hover:text-[#3A5A40] transition-colors py-2 border-b-2 border-transparent hover:border-[#3A5A40]">Como Ajudar</a>
           <a href="#primeira-sessao" class="hover:text-[#3A5A40] transition-colors py-2 border-b-2 border-transparent hover:border-[#3A5A40]">1ª Sessão</a>
           <a href="#atendimento" class="hover:text-[#3A5A40] transition-colors py-2 border-b-2 border-transparent hover:border-[#3A5A40]">Jundiaí & Online</a>
+          <a href="#reembolso" class="hover:text-[#3A5A40] transition-colors py-2 border-b-2 border-transparent hover:border-[#3A5A40]">Reembolso</a>
           <a href="#faq" class="hover:text-[#3A5A40] transition-colors py-2 border-b-2 border-transparent hover:border-[#3A5A40]">Dúvidas</a>
         </nav>
 
@@ -87,8 +94,8 @@
           <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3A5A40] text-white font-medium text-sm hover:bg-[#2B4430] transition-all shadow-sm hover:shadow-md gap-2 transform hover:-translate-y-0.5 touch-target">
-            <i class="fab fa-whatsapp text-lg text-[#25D366]"></i>
+             class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3A5A40] text-white font-medium text-sm hover:bg-[#243B2A] transition-colors shadow-xs hover:shadow-sm gap-2 touch-target">
+            <i class="fab fa-whatsapp text-lg text-[#25D366]" aria-hidden="true"></i>
             <span>Agendar Consulta</span>
           </a>
         </div>
@@ -97,136 +104,116 @@
         <div class="md:hidden flex items-center">
           <button id="mobile-menu-btn" 
                   type="button" 
-                  class="p-2.5 rounded-lg text-[#3A5A40] hover:bg-[#E8EFE9] focus:outline-none transition-colors touch-target"
+                  class="p-2.5 rounded-xl text-[#3A5A40] hover:bg-[#EBF1EC] focus-visible:outline-none transition-colors touch-target"
                   aria-expanded="false" 
+                  aria-controls="mobile-menu"
                   aria-label="Abrir menu de navegação">
-            <i class="fas fa-bars text-xl"></i>
+            <i class="fas fa-bars text-xl" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF8F5]/95 backdrop-blur-xl border-b border-[#E8EFE9] px-6 pt-3 pb-8 space-y-4 shadow-xl">
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF8F5]/98 border-b border-[#E0E8E2] px-6 pt-3 pb-6 space-y-3 shadow-md" aria-label="Menu móvel">
       <a href="#sobre" class="mobile-nav-link block py-2.5 text-base font-medium text-[#243028] hover:text-[#3A5A40] border-b border-gray-100">Sobre Mim</a>
       <a href="#demandas" class="mobile-nav-link block py-2.5 text-base font-medium text-[#243028] hover:text-[#3A5A40] border-b border-gray-100">Como Ajudar</a>
       <a href="#primeira-sessao" class="mobile-nav-link block py-2.5 text-base font-medium text-[#243028] hover:text-[#3A5A40] border-b border-gray-100">1ª Sessão</a>
       <a href="#atendimento" class="mobile-nav-link block py-2.5 text-base font-medium text-[#243028] hover:text-[#3A5A40] border-b border-gray-100">Jundiaí & Online</a>
+      <a href="#reembolso" class="mobile-nav-link block py-2.5 text-base font-medium text-[#243028] hover:text-[#3A5A40] border-b border-gray-100">Reembolso de Convênio</a>
       <a href="#faq" class="mobile-nav-link block py-2.5 text-base font-medium text-[#243028] hover:text-[#3A5A40] border-b border-gray-100">Dúvidas (FAQ)</a>
-      <div class="pt-3">
+      <div class="pt-2">
         <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
            target="_blank" 
            rel="noopener noreferrer" 
-           class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#3A5A40] text-white font-semibold text-base shadow-md gap-2.5 touch-target">
-          <i class="fab fa-whatsapp text-xl text-[#25D366]"></i>
-          <span>Falar no WhatsApp</span>
+           class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#3A5A40] text-white font-semibold text-base shadow-xs gap-2.5 touch-target">
+          <i class="fab fa-whatsapp text-xl text-[#25D366]" aria-hidden="true"></i>
+          <span>Conversar no WhatsApp</span>
         </a>
       </div>
     </div>
   </header>
 
-  <main class="grow">
+  <main id="main-content" class="grow">
 
     <!-- HERO SECTION -->
-    <section id="inicio" class="relative pt-6 pb-16 md:pt-16 md:pb-24 overflow-hidden">
-      <!-- Ambient Lighting Orbs -->
-      <div class="absolute top-0 right-0 -z-10 w-[500px] h-[500px] rounded-full ambient-glow-sage pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 -z-10 w-[450px] h-[450px] rounded-full ambient-glow-terracotta pointer-events-none"></div>
+    <section id="inicio" class="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <!-- Restrained ambient lighting -->
+      <div class="absolute top-0 right-0 -z-10 w-[420px] h-[420px] rounded-full ambient-glow-sage pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-0 -z-10 w-[380px] h-[380px] rounded-full ambient-glow-terracotta pointer-events-none" aria-hidden="true"></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           <!-- Hero Text Content -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal-on-scroll">
             
-            <!-- Location & Credentials Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E8EFE9] text-[#3A5A40] text-xs sm:text-sm font-semibold tracking-wide border border-[#D5E2D7] shadow-xs">
-              <i class="fas fa-heart text-[#C3775B]"></i>
-              <span>Atendimento Presencial em Jundiaí - SP & Online</span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EBF1EC] text-[#3A5A40] text-xs sm:text-sm font-semibold border border-[#D5E2D7]">
+              <i class="fas fa-shield-heart text-[#C3775B]" aria-hidden="true"></i>
+              <span>Atendimento Presencial em Jundiaí e Online para todo o Brasil</span>
             </div>
 
             <!-- Main Title -->
-            <h1 class="font-heading font-bold leading-tight text-[#243028]">
-              Um espaço seguro para você <span class="text-[#3A5A40] italic font-normal underline decoration-[#A3B18A]/60 decoration-wavy decoration-2">desacelerar</span>, se compreender e recomeçar.
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-[#243028] leading-tight">
+              Um espaço seguro para você desacelerar, se compreender e recomeçar.
             </h1>
 
-            <!-- Subtitle -->
-            <p class="text-base sm:text-lg text-[#57655B] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Cuidar da sua saúde mental não precisa ser pesado. Ofereço uma escuta clínica ética, leve e sem julgamentos para te acompanhar no enfrentamento da ansiedade, estresse e busca por autoconhecimento.
+            <p class="text-base sm:text-lg text-[#4E5E53] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Cuidar da sua saúde mental não precisa ser pesado. Ofereço uma escuta clínica ética, acolhedora e fundamentada na ciência para te acompanhar no enfrentamento da ansiedade, estresse e busca por equilíbrio.
             </p>
 
-            <!-- Trust Pills -->
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1 text-xs sm:text-sm text-[#243028] font-medium">
-              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/80 glass-panel shadow-xs">
-                <i class="fas fa-check-circle text-[#3A5A40]"></i> Escuta Ativa & Ética
+            <!-- Trust Points -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-1 text-xs sm:text-sm text-[#243028] font-medium">
+              <span class="inline-flex items-center gap-1.5">
+                <i class="fas fa-check text-[#3A5A40]" aria-hidden="true"></i> Escuta sem julgamentos
               </span>
-              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/80 glass-panel shadow-xs">
-                <i class="fas fa-user-shield text-[#3A5A40]"></i> Sigilo Garantido (CRP)
+              <span class="inline-flex items-center gap-1.5">
+                <i class="fas fa-user-shield text-[#3A5A40]" aria-hidden="true"></i> Sigilo ético profissional
               </span>
-              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/80 glass-panel shadow-xs">
-                <i class="fas fa-seedling text-[#3A5A40]"></i> TCC & Humanismo
+              <span class="inline-flex items-center gap-1.5">
+                <i class="fas fa-file-invoice text-[#3A5A40]" aria-hidden="true"></i> Recibo para reembolso
               </span>
             </div>
 
             <!-- Hero Action Buttons -->
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
               <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#3A5A40] text-white font-semibold text-base hover:bg-[#2B4430] transition-all shadow-md hover:shadow-xl gap-3 transform hover:-translate-y-0.5 touch-target">
-                <i class="fab fa-whatsapp text-2xl text-[#25D366]"></i>
-                <span>Agendar Minha Consulta</span>
+                 class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#3A5A40] text-white font-semibold text-base hover:bg-[#243B2A] transition-colors shadow-xs gap-3 touch-target">
+                <i class="fab fa-whatsapp text-xl text-[#25D366]" aria-hidden="true"></i>
+                <span>Agendar sessão pelo WhatsApp</span>
               </a>
 
               <a href="#sobre" 
-                 class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-4 rounded-full bg-white text-[#3A5A40] font-semibold text-base hover:bg-[#F3EEE7] border border-[#3A5A40]/20 transition-all shadow-xs gap-2 touch-target">
-                <span>Conhecer a Psicóloga</span>
-                <i class="fas fa-arrow-down text-xs"></i>
+                 class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-white text-[#3A5A40] font-semibold text-base hover:bg-[#F4EFEA] border border-[#E0E8E2] transition-colors gap-2 touch-target">
+                <span>Conhecer a psicóloga</span>
+                <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i>
               </a>
             </div>
 
-            <!-- Quick Notice -->
-            <p class="text-xs text-[#57655B] pt-1">
-              <i class="fas fa-circle-info text-[#3A5A40] mr-1"></i> Agendamento simples pelo WhatsApp • Consultório na região da Av. Nove de Julho
+            <p class="text-xs text-[#4E5E53] pt-1">
+              <i class="fas fa-circle-check text-[#3A5A40] mr-1.5" aria-hidden="true"></i> Agendamento direto sem intermediários • Consultório na Chácara Urbana em Jundiaí
             </p>
           </div>
 
-          <!-- Hero Image Column (Antigravity Floating Frame) -->
-          <div class="lg:col-span-5 relative flex justify-center perspective-container reveal-on-scroll">
+          <!-- Hero Image Column -->
+          <div class="lg:col-span-5 relative flex justify-center reveal-on-scroll">
             <div class="relative w-full max-w-md">
               
-              <!-- Subtle Backdrop Aura -->
-              <div class="absolute inset-0 bg-[#3A5A40]/15 rounded-3xl transform rotate-3 scale-102 transition-transform"></div>
-              
-              <!-- Main Psychologist Photo -->
-              <div class="relative overflow-hidden rounded-3xl shadow-2xl bg-white border-4 border-white tilt-card">
+              <div class="relative overflow-hidden rounded-3xl bg-white border border-[#E0E8E2] shadow-md">
                 <img src="/images/aline-duarte.jpg" 
-                     alt="Psicóloga Aline Duarte em seu consultório" 
-                     class="w-full h-auto object-cover aspect-[4/5] transform hover:scale-105 transition-transform duration-700">
+                     alt="Retrato profissional da psicóloga Dra. Aline Duarte sorrindo em seu consultório" 
+                     width="400" 
+                     height="500" 
+                     fetchpriority="high"
+                     class="w-full h-auto object-cover aspect-[4/5]">
                 
-                <!-- Bottom Image Gradient Banner -->
                 <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#243028]/95 via-[#243028]/50 to-transparent p-6 text-white">
                   <p class="font-heading text-lg font-bold">Dra. Aline Duarte</p>
-                  <p class="text-xs text-emerald-200">Psicóloga Clínica • CRP 06/158942</p>
+                  <p class="text-xs text-[#D8E6DC] tabular-nums">Psicóloga Clínica • CRP 06/158942</p>
                 </div>
               </div>
-
-              <!-- Floating Antigravity Badge 1 -->
-              <div class="absolute -bottom-5 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#E8EFE9] flex items-center gap-3 animate-float max-w-[240px]">
-                <div class="w-10 h-10 rounded-full bg-[#E8EFE9] flex items-center justify-center text-[#3A5A40] shrink-0">
-                  <i class="fas fa-user-check text-lg"></i>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-[#243028]">Atendimento Humanizado</p>
-                  <p class="text-[11px] text-[#57655B]">Presencial em Jundiaí & Online</p>
-                </div>
-              </div>
-
-              <!-- Floating Antigravity Badge 2 (Reembolso Quick Button) -->
-              <button id="open-reembolso-modal" class="absolute -top-4 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-lg border border-[#E8EFE9] flex items-center gap-2 text-xs font-bold text-[#3A5A40] hover:bg-[#E8EFE9] transition-all cursor-pointer touch-target">
-                <i class="fas fa-receipt text-[#C3775B]"></i>
-                <span>Reembolso Convênio</span>
-              </button>
 
             </div>
           </div>
@@ -236,53 +223,48 @@
     </section>
 
     <!-- SOBRE MIM / ABORDAGEM TERAPÊUTICA -->
-    <section id="sobre" class="py-16 md:py-24 bg-white relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sobre" class="py-16 md:py-22 px-4 sm:px-6 lg:px-8 bg-white relative">
+      <div class="max-w-7xl mx-auto">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          <!-- Column 1: Image & Credentials -->
+          <!-- Column 1: Credentials Sidebar -->
           <div class="lg:col-span-5 space-y-6 reveal-on-scroll">
-            <div class="bg-[#FAF8F5] p-6 sm:p-8 rounded-3xl border border-[#E8EFE9] glass-panel shadow-md space-y-6">
+            <div class="p-6 sm:p-8 rounded-3xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-6">
               
-              <div class="flex items-center gap-4">
-                <div class="w-16 h-16 rounded-full bg-[#3A5A40] text-white flex items-center justify-center text-2xl font-heading font-bold shadow-sm shrink-0">
-                  AD
-                </div>
-                <div>
-                  <h3 class="font-heading text-xl font-bold text-[#243028]">Aline Duarte</h3>
-                  <p class="text-xs font-semibold text-[#3A5A40] uppercase tracking-wider">Psicóloga Clínica</p>
-                  <p class="text-xs text-[#57655B]">CRP 06/158942 • São Paulo</p>
-                </div>
+              <div class="space-y-1">
+                <p class="font-heading text-2xl font-bold text-[#243028]">Aline Duarte</p>
+                <p class="text-xs font-semibold text-[#3A5A40]">Psicóloga Clínica • CRP 06/158942</p>
+                <p class="text-xs text-[#4E5E53]">Atendimento Presencial em Jundiaí & Online</p>
               </div>
 
-              <hr class="border-[#E8EFE9]">
+              <hr class="border-[#E0E8E2]">
 
               <div class="space-y-3">
-                <h4 class="text-xs font-bold text-[#243028] uppercase tracking-wider">Formação & Credenciais:</h4>
-                <ul class="space-y-3 text-sm text-[#57655B]">
-                  <li class="flex items-start gap-3">
-                    <i class="fas fa-graduation-cap text-[#3A5A40] mt-1 shrink-0"></i>
-                    <span>Graduação em Psicologia com ênfase em Saúde Clínica</span>
+                <p class="text-xs font-bold text-[#243028]">FORMAÇÃO E CREDENCIAIS:</p>
+                <ul class="space-y-3 text-sm text-[#4E5E53]">
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-graduation-cap text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
+                    <span>Graduação em Psicologia com ênfase em Saúde Mental e Prática Clínica</span>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <i class="fas fa-brain text-[#3A5A40] mt-1 shrink-0"></i>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-brain text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
                     <span>Especialização em Terapia Cognitivo-Comportamental (TCC)</span>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <i class="fas fa-certificate text-[#3A5A40] mt-1 shrink-0"></i>
-                    <span>Aprimoramento em Gestão de Ansiedade e Burnout</span>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-certificate text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
+                    <span>Aprimoramento em Manejo da Ansiedade, Estresse e Burnout</span>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <i class="fas fa-location-dot text-[#3A5A40] mt-1 shrink-0"></i>
-                    <span>Consultório físico em localização nobre em Jundiaí - SP</span>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-location-dot text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
+                    <span>Consultório físico na Chácara Urbana em Jundiaí - SP</span>
                   </li>
                 </ul>
               </div>
 
-              <div class="bg-[#E8EFE9]/60 p-4 rounded-2xl text-xs text-[#3A5A40] flex items-center gap-3 border border-[#3A5A40]/15">
-                <i class="fas fa-shield-heart text-xl shrink-0"></i>
-                <span>Compromisso integral com o Código de Ética Profissional do Psicólogo (CFP).</span>
+              <div class="pt-2 text-xs text-[#3A5A40] flex items-center gap-2.5">
+                <i class="fas fa-shield-heart text-base shrink-0" aria-hidden="true"></i>
+                <span>Atuação em total conformidade com o Código de Ética Profissional do Psicólogo (CFP).</span>
               </div>
 
             </div>
@@ -290,49 +272,43 @@
 
           <!-- Column 2: Bio Text -->
           <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
-            <div class="inline-block">
-              <span class="text-xs font-bold uppercase tracking-widest text-[#3A5A40] bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-                Abordagem Terapêutica
-              </span>
-            </div>
-
-            <h2 class="font-heading font-bold text-[#243028] leading-tight">
-              Uma prática pautada na empatia, ciência e acolhimento humano.
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-[#243028] leading-tight !mt-0">
+              Uma prática clínica pautada na empatia, na ciência e no acolhimento humano.
             </h2>
 
-            <p class="text-base text-[#57655B] leading-relaxed">
-              Olá! Sou a Dra. Aline Duarte. Acredito que a psicologia deve ser um ponto de apoio seguro — onde você possa falar abertamente sobre seus medos, incertezas e desejos sem receio de ser julgado(a).
+            <p class="text-base sm:text-lg text-[#4E5E53] leading-relaxed">
+              Olá! Sou a Dra. Aline Duarte. Acredito que a terapia deve ser um espaço de genuíno acolhimento — onde você possa compartilhar seus medos, incertezas e sentimentos sem o receio de ser julgado(a).
             </p>
 
-            <p class="text-base text-[#57655B] leading-relaxed">
-              Minha atuação baseia-se na <strong>Terapia Cognitivo-Comportamental (TCC)</strong> aliada a princípios humanistas. Na prática, isso significa que trabalhamos de forma colaborativa: identificando padrões de pensamento e comportamento que causam sofrimento e construindo estratégias práticas para o seu dia a dia.
+            <p class="text-base text-[#4E5E53] leading-relaxed">
+              Minha prática clínica integra a <strong>Terapia Cognitivo-Comportamental (TCC)</strong> com princípios humanistas. Na prática, trabalhamos de maneira colaborativa: compreendendo padrões de pensamento que geram sofrimento e desenvolvendo estratégias conscientes e saudáveis para o seu cotidiano.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#E8EFE9] tilt-card">
-                <div class="w-9 h-9 rounded-xl bg-[#3A5A40]/10 text-[#3A5A40] flex items-center justify-center mb-3 text-lg">
-                  <i class="fas fa-comments"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-3">
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2 text-[#3A5A40] font-semibold text-sm">
+                  <i class="fas fa-comments" aria-hidden="true"></i>
+                  <span>Comunicação clara</span>
                 </div>
-                <h3 class="font-bold text-sm text-[#243028] mb-1">Diálogo Transparente</h3>
-                <p class="text-xs text-[#57655B] leading-relaxed">Conversas claras, acessíveis e totalmente focadas nas suas necessidades reais.</p>
+                <p class="text-sm text-[#4E5E53] leading-relaxed">Conversas transparentes, sem jargões complexos e com foco no que é relevante para você.</p>
               </div>
 
-              <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#E8EFE9] tilt-card">
-                <div class="w-9 h-9 rounded-xl bg-[#3A5A40]/10 text-[#3A5A40] flex items-center justify-center mb-3 text-lg">
-                  <i class="fas fa-hourglass-half"></i>
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2 text-[#3A5A40] font-semibold text-sm">
+                  <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+                  <span>Respeito ao seu tempo</span>
                 </div>
-                <h3 class="font-bold text-sm text-[#243028] mb-1">Respeito ao Seu Tempo</h3>
-                <p class="text-xs text-[#57655B] leading-relaxed">Cada pessoa tem seu ritmo. A terapia evolui no seu tempo com todo suporte.</p>
+                <p class="text-sm text-[#4E5E53] leading-relaxed">Cada pessoa tem seu próprio ritmo de transformação e desenvolvimento pessoal.</p>
               </div>
             </div>
 
-            <div class="pt-2">
+            <div class="pt-4">
               <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20o%20seu%20atendimento." 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-2 text-sm font-bold text-[#3A5A40] hover:text-[#2B4430] group touch-target">
-                <span>Quer entender como a TCC pode te ajudar? Fale comigo</span>
-                <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                 class="inline-flex items-center gap-2 text-sm font-bold text-[#3A5A40] hover:text-[#243B2A] group touch-target">
+                <span>Quer entender como a TCC pode te apoiar? Fale comigo</span>
+                <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
               </a>
             </div>
 
@@ -343,145 +319,130 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE DEMAND FINDER ("COMO POSSO TE AJUDAR HOJE?") -->
-    <section id="demandas" class="py-16 md:py-24 bg-[#FAF8F5] relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- DEMANDAS ATENDIDAS -->
+    <section id="demandas" class="py-16 md:py-22 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] relative">
+      <div class="max-w-7xl mx-auto">
         
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 reveal-on-scroll">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3A5A40] bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-            Áreas de Atuação
-          </span>
-          <h2 class="font-heading font-bold text-[#243028]">
-            Como a terapia pode te ajudar hoje?
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-10 reveal-on-scroll">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-[#243028]">
+            Como a psicoterapia pode te apoiar no momento atual
           </h2>
-          <p class="text-base text-[#57655B]">
-            Selecione o momento que você está vivendo para ver como podemos trabalhar juntos:
+          <p class="text-base text-[#4E5E53] mx-auto">
+            Selecione uma área abaixo para filtrar as principais demandas acolhidas no consultório:
           </p>
 
-          <!-- Interactive Category Filter Buttons -->
-          <div class="flex flex-wrap justify-center gap-2.5 pt-4">
-            <button class="demand-selector-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all border border-[#3A5A40] bg-[#3A5A40] text-white shadow-sm cursor-pointer touch-target" data-category="all">
-              Todas as Demandas
+          <!-- Filter Controls -->
+          <div role="group" aria-label="Filtro de demandas atendidas" class="flex flex-wrap justify-center gap-2 pt-3">
+            <button class="demand-selector-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors border border-[#3A5A40] bg-[#3A5A40] text-white shadow-xs cursor-pointer touch-target" data-category="all" aria-pressed="true">
+              Todas as demandas
             </button>
-            <button class="demand-selector-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all border border-[#E8EFE9] bg-white text-[#57655B] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="ansiedade">
+            <button class="demand-selector-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors border border-[#E0E8E2] bg-white text-[#4E5E53] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="ansiedade" aria-pressed="false">
               Ansiedade & Pânico
             </button>
-            <button class="demand-selector-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all border border-[#E8EFE9] bg-white text-[#57655B] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="burnout">
-              Burnout & Trabalho
+            <button class="demand-selector-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors border border-[#E0E8E2] bg-white text-[#4E5E53] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="burnout" aria-pressed="false">
+              Burnout & Carreira
             </button>
-            <button class="demand-selector-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all border border-[#E8EFE9] bg-white text-[#57655B] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="relacionamentos">
+            <button class="demand-selector-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors border border-[#E0E8E2] bg-white text-[#4E5E53] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="relacionamentos" aria-pressed="false">
               Relacionamentos
             </button>
-            <button class="demand-selector-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all border border-[#E8EFE9] bg-white text-[#57655B] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="autoconhecimento">
+            <button class="demand-selector-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors border border-[#E0E8E2] bg-white text-[#4E5E53] hover:border-[#3A5A40] cursor-pointer touch-target" data-category="autoconhecimento" aria-pressed="false">
               Autoconhecimento
             </button>
           </div>
         </div>
 
         <!-- Demand Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div id="demandas-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-live="polite">
           
-          <!-- Demand Card 1 -->
-          <div class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-[#E8EFE9] tilt-card shadow-xs hover:shadow-md transition-all reveal-on-scroll" data-category="ansiedade">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fas fa-wind"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Transtornos de Ansiedade</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Manejo prático de pensamentos acelerados, crises de pânico, ansiedade social, tensão constante e medo do futuro.
+          <!-- Card 1 -->
+          <article class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-[#E0E8E2] soft-card reveal-on-scroll" data-category="ansiedade">
+            <div class="space-y-3">
+              <i class="fas fa-wind text-2xl text-[#3A5A40]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Transtornos de Ansiedade</h3>
+              <p class="text-sm text-[#4E5E53] leading-relaxed">
+                Manejo prático de pensamentos acelerados, crises de pânico, ansiedade social, tensão física constante e preocupações excessivas com o futuro.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-100 mt-4 flex items-center justify-between text-xs text-[#3A5A40] font-semibold">
-              <span>Foco: Autorregulação emocional</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="pt-4 mt-4 text-xs text-[#3A5A40] font-semibold flex items-center justify-between">
+              <span>Autorregulação emocional</span>
+              <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </div>
-          </div>
+          </article>
 
-          <!-- Demand Card 2 -->
-          <div class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-[#E8EFE9] tilt-card shadow-xs hover:shadow-md transition-all reveal-on-scroll" data-category="burnout">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#F3EEE7] text-[#C3775B] flex items-center justify-center text-xl">
-                <i class="fas fa-battery-quarter"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Burnout & Estresse Profissional</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Acompanhamento para profissionais sobrecarregados, esgotados pela rotina ou buscando impor limites saudáveis no trabalho.
+          <!-- Card 2 -->
+          <article class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-[#E0E8E2] soft-card reveal-on-scroll" data-category="burnout">
+            <div class="space-y-3">
+              <i class="fas fa-battery-quarter text-2xl text-[#C3775B]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Burnout & Estresse no Trabalho</h3>
+              <p class="text-sm text-[#4E5E53] leading-relaxed">
+                Acompanhamento para profissionais sobrecarregados, esgotados pela rotina, com dificuldade para desligar da profissão ou estabelecer limites saudáveis.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-100 mt-4 flex items-center justify-between text-xs text-[#C3775B] font-semibold">
-              <span>Foco: Equilíbrio & Limites</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="pt-4 mt-4 text-xs text-[#C3775B] font-semibold flex items-center justify-between">
+              <span>Equilíbrio entre trabalho e vida</span>
+              <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </div>
-          </div>
+          </article>
 
-          <!-- Demand Card 3 -->
-          <div class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-[#E8EFE9] tilt-card shadow-xs hover:shadow-md transition-all reveal-on-scroll" data-category="autoconhecimento">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fas fa-gem"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Autoestima & Autocompaixão</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Superação da autocrítica excessiva, autossabotagem e desenvolvimento de uma relação mais leve com suas conquistas.
+          <!-- Card 3 -->
+          <article class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-[#E0E8E2] soft-card reveal-on-scroll" data-category="autoconhecimento">
+            <div class="space-y-3">
+              <i class="fas fa-gem text-2xl text-[#3A5A40]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Autoestima & Autocompaixão</h3>
+              <p class="text-sm text-[#4E5E53] leading-relaxed">
+                Superação da autocrítica destrutiva, insegurança profunda, autossabotagem e desenvolvimento de uma relação de respeito consigo mesmo(a).
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-100 mt-4 flex items-center justify-between text-xs text-[#3A5A40] font-semibold">
-              <span>Foco: Fortalecimento pessoal</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="pt-4 mt-4 text-xs text-[#3A5A40] font-semibold flex items-center justify-between">
+              <span>Fortalecimento interno</span>
+              <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </div>
-          </div>
+          </article>
 
-          <!-- Demand Card 4 -->
-          <div class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-[#E8EFE9] tilt-card shadow-xs hover:shadow-md transition-all reveal-on-scroll" data-category="relacionamentos">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#F3EEE7] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Dificuldades Relacionais</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Desenvolvimento de comunicação assertiva, superação de conflitos amorosos/familiares e fim da dependência emocional.
+          <!-- Card 4 -->
+          <article class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-[#E0E8E2] soft-card reveal-on-scroll" data-category="relacionamentos">
+            <div class="space-y-3">
+              <i class="fas fa-handshake text-2xl text-[#3A5A40]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Dificuldades Relacionais</h3>
+              <p class="text-sm text-[#4E5E53] leading-relaxed">
+                Desenvolvimento de comunicação assertiva, resolução de conflitos interpessoais, imposição de limites claros e superação de dependência emocional.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-100 mt-4 flex items-center justify-between text-xs text-[#3A5A40] font-semibold">
-              <span>Foco: Comunicação saudável</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="pt-4 mt-4 text-xs text-[#3A5A40] font-semibold flex items-center justify-between">
+              <span>Relações mais saudáveis</span>
+              <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </div>
-          </div>
+          </article>
 
-          <!-- Demand Card 5 -->
-          <div class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-[#E8EFE9] tilt-card shadow-xs hover:shadow-md transition-all reveal-on-scroll" data-category="autoconhecimento">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fas fa-feather"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Luto & Transições de Vida</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Suporte para momentos de grandes mudanças: divórcios, mudanças de cidade, encerramento de ciclos ou perda de entes queridos.
+          <!-- Card 5 -->
+          <article class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-[#E0E8E2] soft-card reveal-on-scroll" data-category="autoconhecimento">
+            <div class="space-y-3">
+              <i class="fas fa-feather text-2xl text-[#3A5A40]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Luto & Transições de Vida</h3>
+              <p class="text-sm text-[#4E5E53] leading-relaxed">
+                Espaço de acolhimento e elaboração para encerramento de ciclos importantes: perda de entes queridos, divórcios, mudanças de carreira ou de cidade.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-100 mt-4 flex items-center justify-between text-xs text-[#3A5A40] font-semibold">
-              <span>Foco: Acolhimento de ciclos</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="pt-4 mt-4 text-xs text-[#3A5A40] font-semibold flex items-center justify-between">
+              <span>Elaboração de ciclos</span>
+              <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </div>
-          </div>
+          </article>
 
-          <!-- Demand Card 6 -->
-          <div class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-[#E8EFE9] tilt-card shadow-xs hover:shadow-md transition-all reveal-on-scroll" data-category="ansiedade">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#F3EEE7] text-[#C3775B] flex items-center justify-center text-xl">
-                <i class="fas fa-sun"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Humor & Desânimo Persistente</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Trabalho clínico na recuperação da motivação, combate à apatia diária e resgate do prazer nas pequenas coisas.
+          <!-- Card 6 -->
+          <article class="demand-card flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-[#E0E8E2] soft-card reveal-on-scroll" data-category="ansiedade">
+            <div class="space-y-3">
+              <i class="fas fa-sun text-2xl text-[#C3775B]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Desânimo & Alterações de Humor</h3>
+              <p class="text-sm text-[#4E5E53] leading-relaxed">
+                Cuidado clínico voltado ao resgate da vitalidade, identificação de fatores mantenedores da apatia e recuperação gradual do bem-estar.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-100 mt-4 flex items-center justify-between text-xs text-[#C3775B] font-semibold">
-              <span>Foco: Resgate da vitalidade</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="pt-4 mt-4 text-xs text-[#C3775B] font-semibold flex items-center justify-between">
+              <span>Resgate de vitalidade</span>
+              <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </div>
-          </div>
+          </article>
 
         </div>
 
@@ -489,69 +450,45 @@
     </section>
 
     <!-- COMO FUNCIONA A PRIMEIRA SESSÃO -->
-    <section id="primeira-sessao" class="py-16 md:py-24 bg-white relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="primeira-sessao" class="py-16 md:py-22 px-4 sm:px-6 lg:px-8 bg-white relative">
+      <div class="max-w-7xl mx-auto">
         
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3A5A40] bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-            Passo a Passo
-          </span>
-          <h2 class="font-heading font-bold text-[#243028]">
-            Como funciona o início da sua jornada
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-14 reveal-on-scroll">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-[#243028]">
+            Como funciona o início do seu acompanhamento
           </h2>
-          <p class="text-base text-[#57655B]">
-            É natural sentir incerteza antes da primeira consulta. Veja como o processo é simples e acolhedor:
+          <p class="text-base text-[#4E5E53] mx-auto">
+            É natural ter dúvidas antes do primeiro encontro. O processo é simples, confidencial e acolhedor:
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           
-          <!-- Step 1 -->
-          <div class="bg-[#FAF8F5] p-8 rounded-3xl border border-[#E8EFE9] tilt-card relative reveal-on-scroll">
-            <div class="absolute -top-4 left-8 bg-[#3A5A40] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-xs">
-              Passo 01
-            </div>
-            <div class="pt-2 space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Contato Inicial</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Você envia uma mensagem no WhatsApp. Tiramos suas dúvidas sobre horários, valores e alinhamos se prefere o atendimento <strong>Presencial em Jundiaí</strong> ou <strong>Online</strong>.
-              </p>
-            </div>
+          <!-- Stage 1 -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-3 reveal-on-scroll">
+            <span class="text-2xl font-heading font-bold text-[#3A5A40] block tabular-nums">01.</span>
+            <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Contato e Alinhamento</h3>
+            <p class="text-sm text-[#4E5E53] leading-relaxed">
+              Você envia uma mensagem no WhatsApp. Alinhamos horários disponíveis, valores e você escolhe se prefere o atendimento presencial em Jundiaí ou online.
+            </p>
           </div>
 
-          <!-- Step 2 -->
-          <div class="bg-[#FAF8F5] p-8 rounded-3xl border border-[#E8EFE9] tilt-card relative reveal-on-scroll">
-            <div class="absolute -top-4 left-8 bg-[#3A5A40] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-xs">
-              Passo 02
-            </div>
-            <div class="pt-2 space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fas fa-mug-hot"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">A Primeira Consulta</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                Uma sessão de 50 minutos dedicada a te escutar. Conversaremos sobre o momento que você está vivendo, suas expectativas e o que busca alcançar com a terapia.
-              </p>
-            </div>
+          <!-- Stage 2 -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-3 reveal-on-scroll">
+            <span class="text-2xl font-heading font-bold text-[#3A5A40] block tabular-nums">02.</span>
+            <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Primeira Sessão de Escuta</h3>
+            <p class="text-sm text-[#4E5E53] leading-relaxed">
+              Uma consulta individual de 50 minutos dedicada a compreender o seu momento atual, suas queixas principais e o que você busca alcançar com a psicoterapia.
+            </p>
           </div>
 
-          <!-- Step 3 -->
-          <div class="bg-[#FAF8F5] p-8 rounded-3xl border border-[#E8EFE9] tilt-card relative reveal-on-scroll">
-            <div class="absolute -top-4 left-8 bg-[#3A5A40] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-xs">
-              Passo 03
-            </div>
-            <div class="pt-2 space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-xl">
-                <i class="fas fa-route"></i>
-              </div>
-              <h3 class="font-heading text-xl font-bold text-[#243028]">Plano Terapêutico</h3>
-              <p class="text-sm text-[#57655B] leading-relaxed">
-                A partir da primeira conversa, estruturamos os objetivos das sessões seguintes. O acompanhamento é contínuo, seguro e adaptado à sua evolução.
-              </p>
-            </div>
+          <!-- Stage 3 -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-3 reveal-on-scroll">
+            <span class="text-2xl font-heading font-bold text-[#3A5A40] block tabular-nums">03.</span>
+            <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">Construção do Plano Clínico</h3>
+            <p class="text-sm text-[#4E5E53] leading-relaxed">
+              Definimos em conjunto a frequência das consultas e os focos de trabalho, respeitando a sua individualidade, seus limites e o seu ritmo.
+            </p>
           </div>
 
         </div>
@@ -560,164 +497,168 @@
           <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20minha%20primeira%20sess%C3%A3o." 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#3A5A40] text-white font-semibold text-base hover:bg-[#2B4430] transition-all shadow-md hover:shadow-lg gap-3 touch-target">
-            <i class="fab fa-whatsapp text-xl text-[#25D366]"></i>
-            <span>Agendar Minha Primeira Sessão</span>
+             class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#3A5A40] text-white font-semibold text-base hover:bg-[#243B2A] transition-colors shadow-xs gap-3 touch-target">
+            <i class="fab fa-whatsapp text-xl text-[#25D366]" aria-hidden="true"></i>
+            <span>Agendar primeira sessão</span>
           </a>
         </div>
 
       </div>
     </section>
 
-    <!-- MODALIDADES DE ATENDIMENTO: JUNDIAÍ VS ONLINE -->
-    <section id="atendimento" class="py-16 md:py-24 bg-[#FAF8F5]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- MODALIDADES: JUNDIAÍ VS ONLINE -->
+    <section id="atendimento" class="py-16 md:py-22 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto">
         
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 reveal-on-scroll">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3A5A40] bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-            Modalidades
-          </span>
-          <h2 class="font-heading font-bold text-[#243028]">
-            Escolha como prefere ser atendido(a)
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 reveal-on-scroll">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-[#243028]">
+            Atendimento presencial em Jundiaí e consultas online
           </h2>
-          <p class="text-base text-[#57655B]">
-            Seja presencialmente em Jundiaí - SP ou no conforto da sua casa via atendimento online.
+          <p class="text-base text-[#4E5E53] mx-auto">
+            Escolha o formato que melhor se adapta à sua rotina e localização:
           </p>
 
-          <!-- Interactive Tab Controls -->
-          <div class="pt-4 flex justify-center">
-            <div class="inline-flex p-1.5 rounded-full bg-white border border-[#E8EFE9] w-full max-w-md shadow-xs">
-              <button id="tab-presencial" class="flex-1 py-3 px-5 text-center font-semibold rounded-full bg-[#3A5A40] text-white shadow-md transition-all duration-300 cursor-pointer text-sm sm:text-base touch-target">
-                <i class="fas fa-building-user mr-2"></i> Presencial Jundiaí
+          <!-- Tab Controls -->
+          <div role="tablist" aria-label="Formatos de atendimento" class="pt-3 flex justify-center">
+            <div class="inline-flex p-1.5 rounded-full bg-white border border-[#E0E8E2] w-full max-w-md shadow-xs">
+              <button id="tab-presencial" 
+                      role="tab" 
+                      aria-selected="true" 
+                      aria-controls="content-presencial" 
+                      class="flex-1 py-2.5 px-5 text-center font-semibold rounded-full bg-[#3A5A40] text-white shadow-xs transition-all duration-200 cursor-pointer text-sm sm:text-base touch-target">
+                <i class="fas fa-building mr-2" aria-hidden="true"></i> Presencial em Jundiaí
               </button>
-              <button id="tab-online" class="flex-1 py-3 px-5 text-center font-semibold rounded-full text-[#3A5A40] hover:bg-[#E8EFE9] transition-all duration-300 cursor-pointer text-sm sm:text-base touch-target">
-                <i class="fas fa-video mr-2"></i> Online
+              <button id="tab-online" 
+                      role="tab" 
+                      aria-selected="false" 
+                      aria-controls="content-online" 
+                      class="flex-1 py-2.5 px-5 text-center font-semibold rounded-full text-[#3A5A40] hover:bg-[#EBF1EC] transition-all duration-200 cursor-pointer text-sm sm:text-base touch-target">
+                <i class="fas fa-video mr-2" aria-hidden="true"></i> Online
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Tab Content 1: Presencial Jundiaí -->
-        <div id="content-presencial" class="transition-all duration-500 reveal-on-scroll">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 border border-[#E8EFE9] shadow-md">
+        <!-- Presencial Content -->
+        <div id="content-presencial" role="tabpanel" aria-labelledby="tab-presencial" class="transition-all duration-300 reveal-on-scroll">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div class="lg:col-span-6 space-y-6">
-              <div class="inline-flex items-center gap-2 text-xs font-bold text-[#3A5A40] uppercase tracking-wider bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-                <i class="fas fa-map-marker-alt text-[#C3775B]"></i> Consultório Físico em Jundiaí - SP
+            <div class="lg:col-span-6 space-y-5">
+              <div class="inline-flex items-center gap-2 text-xs font-bold text-[#3A5A40] bg-[#EBF1EC] px-3.5 py-1.5 rounded-full">
+                <i class="fas fa-location-dot text-[#C3775B]" aria-hidden="true"></i> Consultório em Jundiaí - SP
               </div>
 
-              <h3 class="font-heading text-2xl sm:text-3xl font-bold text-[#243028]">
-                Ambiente acolhedor, privativo e pensado para o seu conforto.
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-[#243028]">
+                Ambiente silencioso, privativo e acolhedor para você falar livremente.
               </h3>
 
-              <p class="text-sm sm:text-base text-[#57655B] leading-relaxed">
-                Localizado na região nobre de Jundiaí (próximo à Av. Nove de Julho / Chácara Urbana), o consultório oferece fácil acesso, ambiente climatizado, recepção confortável e isolamento acústico para garantir total privacidade.
+              <p class="text-sm sm:text-base text-[#4E5E53] leading-relaxed">
+                Localizado na Chácara Urbana (região nobre próxima à Avenida Nove de Julho), o consultório conta com isolamento acústico, climatização agradável e recepção reservada, garantindo total privacidade durante suas consultas.
               </p>
 
-              <div class="space-y-3 text-sm text-[#243028]">
-                <div class="flex items-center gap-3">
-                  <i class="fas fa-square-check text-[#3A5A40]"></i>
-                  <span>Fácil estacionamento e acesso por transporte público ou aplicativo.</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i class="fas fa-square-check text-[#3A5A40]"></i>
-                  <span>Ambiente silencioso, seguro e com acessibilidade.</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i class="fas fa-square-check text-[#3A5A40]"></i>
-                  <span>Horários flexíveis de segunda a sexta-feira.</span>
-                </div>
-              </div>
+              <ul class="space-y-3 text-sm text-[#243028]">
+                <li class="flex items-center gap-2.5">
+                  <i class="fas fa-check-circle text-[#3A5A40]" aria-hidden="true"></i>
+                  <span>Fácil acesso de carro ou transporte público com estacionamento próximo.</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fas fa-check-circle text-[#3A5A40]" aria-hidden="true"></i>
+                  <span>Ambiente com acessibilidade e privacidade acústica.</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fas fa-check-circle text-[#3A5A40]" aria-hidden="true"></i>
+                  <span>Horários com agendamento prévio de segunda a sexta-feira.</span>
+                </li>
+              </ul>
 
               <div class="pt-2">
                 <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20presencial%20em%20Jundia%C3%AD." 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#3A5A40] text-white font-semibold text-sm hover:bg-[#2B4430] transition-all gap-2 touch-target">
-                  <i class="fab fa-whatsapp text-lg text-[#25D366]"></i>
-                  <span>Agendar Atendimento Presencial</span>
+                   class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3A5A40] text-white font-semibold text-sm hover:bg-[#243B2A] transition-colors gap-2 touch-target">
+                  <i class="fab fa-whatsapp text-lg text-[#25D366]" aria-hidden="true"></i>
+                  <span>Agendar atendimento presencial</span>
                 </a>
               </div>
             </div>
 
             <div class="lg:col-span-6">
-              <div class="relative overflow-hidden rounded-2xl shadow-md border-4 border-white tilt-card">
+              <div class="overflow-hidden rounded-2xl border border-[#E0E8E2] shadow-sm">
                 <img src="/images/consultorio-jundiai.jpg" 
-                     alt="Consultório de psicologia da Dra. Aline Duarte em Jundiaí - SP" 
-                     class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500">
-                <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg text-xs font-semibold text-[#3A5A40] shadow-xs">
-                  <i class="fas fa-camera mr-1"></i> Consultório em Jundiaí - SP
-                </div>
+                     alt="Consultório acolhedor de psicologia da Dra. Aline Duarte em Jundiaí" 
+                     width="600" 
+                     height="380" 
+                     loading="lazy" 
+                     class="w-full h-80 object-cover">
               </div>
+              <p class="text-xs text-[#4E5E53] pt-2 text-center sm:text-left">
+                <i class="fas fa-location-dot mr-1 text-[#3A5A40]" aria-hidden="true"></i> Chácara Urbana • Jundiaí - SP (Próximo à Av. Nove de Julho)
+              </p>
             </div>
 
           </div>
         </div>
 
-        <!-- Tab Content 2: Online -->
-        <div id="content-online" class="hidden transition-all duration-500">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 border border-[#E8EFE9] shadow-md">
+        <!-- Online Content -->
+        <div id="content-online" role="tabpanel" aria-labelledby="tab-online" class="hidden transition-all duration-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div class="lg:col-span-6 space-y-6">
-              <div class="inline-flex items-center gap-2 text-xs font-bold text-[#3A5A40] uppercase tracking-wider bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-                <i class="fas fa-globe text-[#3A5A40]"></i> Atendimento Online Sem Fronteiras
+            <div class="lg:col-span-6 space-y-5">
+              <div class="inline-flex items-center gap-2 text-xs font-bold text-[#3A5A40] bg-[#EBF1EC] px-3.5 py-1.5 rounded-full">
+                <i class="fas fa-globe text-[#3A5A40]" aria-hidden="true"></i> Terapia Online Global
               </div>
 
-              <h3 class="font-heading text-2xl sm:text-3xl font-bold text-[#243028]">
-                A mesma eficácia clínica onde quer que você esteja.
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-[#243028]">
+                A mesma eficácia clínica com a comodidade do seu próprio espaço.
               </h3>
 
-              <p class="text-sm sm:text-base text-[#57655B] leading-relaxed">
-                As sessões online são realizadas por videochamada através de plataformas criptografadas e seguras. Ideal para quem possui rotina corrida, viaja com frequência ou prefere a comodidade de ser atendido em casa.
+              <p class="text-sm sm:text-base text-[#4E5E53] leading-relaxed">
+                As sessões online são realizadas por videochamada através de plataformas criptografadas e em estrita conformidade com as resoluções do CFP. Ideal para quem possui rotina dinâmica, viaja com frequência ou mora fora de Jundiaí.
               </p>
 
-              <div class="space-y-3 text-sm text-[#243028]">
-                <div class="flex items-center gap-3">
-                  <i class="fas fa-lock text-[#3A5A40]"></i>
-                  <span>Sigilo garantido e plataforma em conformidade com o CFP.</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i class="fas fa-house text-[#3A5A40]"></i>
-                  <span>Praticidade: economize tempo de deslocamento no trânsito.</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i class="fas fa-earth-americas text-[#3A5A40]"></i>
-                  <span>Atendimento para brasileiros no Brasil e no exterior.</span>
-                </div>
-              </div>
+              <ul class="space-y-3 text-sm text-[#243028]">
+                <li class="flex items-center gap-2.5">
+                  <i class="fas fa-check-circle text-[#3A5A40]" aria-hidden="true"></i>
+                  <span>Plataforma segura com sigilo profissional rigoroso.</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fas fa-check-circle text-[#3A5A40]" aria-hidden="true"></i>
+                  <span>Sem tempo perdido com deslocamento ou trânsito.</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fas fa-check-circle text-[#3A5A40]" aria-hidden="true"></i>
+                  <span>Atendimento para brasileiros residentes no Brasil ou no exterior.</span>
+                </li>
+              </ul>
 
               <div class="pt-2">
                 <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20online." 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#3A5A40] text-white font-semibold text-sm hover:bg-[#2B4430] transition-all gap-2 touch-target">
-                  <i class="fab fa-whatsapp text-lg text-[#25D366]"></i>
-                  <span>Agendar Atendimento Online</span>
+                   class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3A5A40] text-white font-semibold text-sm hover:bg-[#243B2A] transition-colors gap-2 touch-target">
+                  <i class="fab fa-whatsapp text-lg text-[#25D366]" aria-hidden="true"></i>
+                  <span>Agendar atendimento online</span>
                 </a>
               </div>
             </div>
 
-            <div class="lg:col-span-6 flex justify-center">
-              <div class="bg-[#FAF8F5] p-6 sm:p-8 rounded-3xl border border-[#E8EFE9] shadow-sm w-full space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-[#E8EFE9] text-[#3A5A40] flex items-center justify-center text-2xl">
-                  <i class="fas fa-shield-halved"></i>
-                </div>
-                <h4 class="font-heading text-xl font-bold text-[#243028]">O que você precisa para a sessão online:</h4>
-                <ul class="space-y-3 text-sm text-[#57655B]">
-                  <li class="flex items-start gap-2">
-                    <i class="fas fa-check text-[#3A5A40] mt-1"></i>
-                    <span>Dispositivo com câmera e microfone (celular ou computador).</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <i class="fas fa-check text-[#3A5A40] mt-1"></i>
-                    <span>Conexão de internet estável.</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <i class="fas fa-check text-[#3A5A40] mt-1"></i>
-                    <span>Um local reservado onde você se sinta seguro(a) para conversar livremente.</span>
-                  </li>
-                </ul>
-              </div>
+            <div class="lg:col-span-6 space-y-4">
+              <i class="fas fa-shield-halved text-2xl text-[#3A5A40]" aria-hidden="true"></i>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-[#243028]">O que é necessário para a sessão online:</h3>
+              <ul class="space-y-3 text-sm text-[#4E5E53]">
+                <li class="flex items-start gap-2.5">
+                  <i class="fas fa-check text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
+                  <span>Celular ou computador com câmera, microfone e fones de ouvido.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fas fa-check text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
+                  <span>Conexão de internet estável.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fas fa-check text-[#3A5A40] mt-1 shrink-0" aria-hidden="true"></i>
+                  <span>Um ambiente reservado e privativo onde você se sinta seguro(a) para dialogar.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -726,99 +667,155 @@
       </div>
     </section>
 
-    <!-- FAQ SECTION (PERGUNTAS FREQUENTES) -->
-    <section id="faq" class="py-16 md:py-24 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- REEMBOLSO PELO PLANO DE SAÚDE -->
+    <section id="reembolso" class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-[#E0E8E2]">
+      <div class="max-w-5xl mx-auto">
         
-        <div class="text-center space-y-4 mb-12 reveal-on-scroll">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3A5A40] bg-[#E8EFE9] px-3.5 py-1.5 rounded-full border border-[#D5E2D7]">
-            Tire Suas Dúvidas
-          </span>
-          <h2 class="font-heading font-bold text-[#243028]">
-            Perguntas Frequentes
+        <div class="text-center max-w-2xl mx-auto space-y-2 mb-10 reveal-on-scroll">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-[#243028]">
+            Como funciona o reembolso pelo seu convênio médico
           </h2>
-          <p class="text-base text-[#57655B]">
-            Respostas transparentes para as principais dúvidas sobre o atendimento psicológico.
+          <p class="text-base text-[#4E5E53]">
+            As consultas são particulares, mas você pode recuperar o valor investido utilizando o recibo formal da psicóloga junto ao seu plano de saúde:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-2.5">
+            <span class="text-xl font-heading font-bold text-[#3A5A40] block tabular-nums">1.</span>
+            <h3 class="font-bold text-base text-[#243028]">Consulta & Pagamento</h3>
+            <p class="text-sm text-[#4E5E53] leading-relaxed">
+              Você realiza o atendimento (presencial ou online) e efetua o pagamento diretamente com a psicóloga.
+            </p>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-2.5">
+            <span class="text-xl font-heading font-bold text-[#3A5A40] block tabular-nums">2.</span>
+            <h3 class="font-bold text-base text-[#243028]">Emissão de Recibo</h3>
+            <p class="text-sm text-[#4E5E53] leading-relaxed">
+              Emito um recibo formal e Nota Fiscal com registro de CRP, CPF/CNPJ, valor e código específico da sessão psicológica.
+            </p>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#FAF8F5] border border-[#E0E8E2] space-y-2.5">
+            <span class="text-xl font-heading font-bold text-[#3A5A40] block tabular-nums">3.</span>
+            <h3 class="font-bold text-base text-[#243028]">Ressarcimento em Conta</h3>
+            <p class="text-sm text-[#4E5E53] leading-relaxed">
+              Você envia a foto do documento pelo aplicativo ou site do seu convênio e recebe o reembolso creditado na sua conta bancária.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-8 p-5 sm:p-6 rounded-xl bg-[#EBF1EC] text-xs sm:text-sm text-[#3A5A40] flex items-center gap-3 border border-[#3A5A40]/15">
+          <i class="fas fa-circle-info text-base shrink-0" aria-hidden="true"></i>
+          <span><strong>Orientação prática:</strong> A maioria dos planos de saúde prevê reembolso para psicoterapia. Entre em contato com seu convênio para consultar o valor da tabela de ressarcimento!</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (PERGUNTAS FREQUENTES) -->
+    <section id="faq" class="py-16 md:py-22 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5]">
+      <div class="max-w-3xl mx-auto">
+        
+        <div class="text-center space-y-3 mb-10 reveal-on-scroll">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-[#243028]">
+            Perguntas frequentes sobre as consultas
+          </h2>
+          <p class="text-base text-[#4E5E53]">
+            Respostas diretas e transparentes para esclarecer suas principais dúvidas:
           </p>
         </div>
 
         <div class="space-y-4 reveal-on-scroll">
           
           <!-- FAQ 1 -->
-          <div class="bg-[#FAF8F5] rounded-2xl border border-[#E8EFE9] overflow-hidden shadow-xs">
-            <button class="faq-accordion-btn w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:bg-[#E8EFE9]/50 transition-colors focus:outline-none touch-target" aria-expanded="false">
+          <div class="bg-white rounded-2xl border border-[#E0E8E2] soft-card p-5 sm:p-6">
+            <button class="faq-accordion-btn w-full text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:text-[#3A5A40] transition-colors focus-visible:outline-none touch-target" 
+                    aria-expanded="false" 
+                    aria-controls="faq-content-1">
               <span>Qual é a duração de cada sessão?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-sm transition-transform duration-300 shrink-0 ml-4"></i>
+              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-xs transition-transform duration-200 shrink-0 ml-4" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content px-5 text-sm text-[#57655B] leading-relaxed">
-              <div class="pb-5 pt-1 border-t border-gray-100">
-                Cada sessão individual tem a duração de aproximadamente <strong>50 minutos</strong>. É um tempo reservado exclusivamente para você, garantindo pontualidade e escuta atenta.
+            <div id="faq-content-1" class="accordion-content text-sm text-[#4E5E53] leading-relaxed">
+              <div class="pt-3">
+                Cada consulta tem a duração de <strong>50 minutos</strong>. É um tempo dedicado integralmente à sua escuta, com pontualidade e atenção cuidadosa.
               </div>
             </div>
           </div>
 
           <!-- FAQ 2 -->
-          <div class="bg-[#FAF8F5] rounded-2xl border border-[#E8EFE9] overflow-hidden shadow-xs">
-            <button class="faq-accordion-btn w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:bg-[#E8EFE9]/50 transition-colors focus:outline-none touch-target" aria-expanded="false">
-              <span>Como funciona o reembolso pelo plano de saúde?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-sm transition-transform duration-300 shrink-0 ml-4"></i>
+          <div class="bg-white rounded-2xl border border-[#E0E8E2] soft-card p-5 sm:p-6">
+            <button class="faq-accordion-btn w-full text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:text-[#3A5A40] transition-colors focus-visible:outline-none touch-target" 
+                    aria-expanded="false" 
+                    aria-controls="faq-content-2">
+              <span>Você atende por plano de saúde (convênio)?</span>
+              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-xs transition-transform duration-200 shrink-0 ml-4" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content px-5 text-sm text-[#57655B] leading-relaxed">
-              <div class="pb-5 pt-1 border-t border-gray-100">
-                O atendimento é particular, mas você pode solicitar o <strong>reembolso</strong> junto ao seu plano de saúde. Para isso, emito <strong>recibo formal com registro de CRP e Nota Fiscal</strong> a cada consulta. <button id="open-reembolso-modal" class="text-[#3A5A40] font-bold underline cursor-pointer">Clique aqui para ver o passo a passo de como solicitar.</button>
+            <div id="faq-content-2" class="accordion-content text-sm text-[#4E5E53] leading-relaxed">
+              <div class="pt-3">
+                Os atendimentos são particulares. Para pacientes com convênio médico, emito <strong>recibo formal com CRP e Nota Fiscal</strong> para que você solicite o <strong>reembolso</strong> direto com o seu plano de saúde.
               </div>
             </div>
           </div>
 
           <!-- FAQ 3 -->
-          <div class="bg-[#FAF8F5] rounded-2xl border border-[#E8EFE9] overflow-hidden shadow-xs">
-            <button class="faq-accordion-btn w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:bg-[#E8EFE9]/50 transition-colors focus:outline-none touch-target" aria-expanded="false">
-              <span>Qual a frequência recomendada para as consultas?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-sm transition-transform duration-300 shrink-0 ml-4"></i>
+          <div class="bg-white rounded-2xl border border-[#E0E8E2] soft-card p-5 sm:p-6">
+            <button class="faq-accordion-btn w-full text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:text-[#3A5A40] transition-colors focus-visible:outline-none touch-target" 
+                    aria-expanded="false" 
+                    aria-controls="faq-content-3">
+              <span>Qual é a frequência recomendada para as consultas?</span>
+              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-xs transition-transform duration-200 shrink-0 ml-4" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content px-5 text-sm text-[#57655B] leading-relaxed">
-              <div class="pb-5 pt-1 border-t border-gray-100">
-                No início do acompanhamento, a frequência recomendada é <strong>semanal</strong> para fortalecer o vínculo e dar ritmo ao progresso. Conforme os objetivos são alcançados, o espaçamento pode ser reavaliado.
+            <div id="faq-content-3" class="accordion-content text-sm text-[#4E5E53] leading-relaxed">
+              <div class="pt-3">
+                O início do processo terapêutico é habitualmente <strong>semanal</strong> para construir o vínculo e dar consistência às intervenções. Conforme seus objetivos forem sendo alcançados, o espaçamento entre as sessões é reavaliado em conjunto.
               </div>
             </div>
           </div>
 
           <!-- FAQ 4 -->
-          <div class="bg-[#FAF8F5] rounded-2xl border border-[#E8EFE9] overflow-hidden shadow-xs">
-            <button class="faq-accordion-btn w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:bg-[#E8EFE9]/50 transition-colors focus:outline-none touch-target" aria-expanded="false">
-              <span>Como funciona o sigilo profissional?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-sm transition-transform duration-300 shrink-0 ml-4"></i>
+          <div class="bg-white rounded-2xl border border-[#E0E8E2] soft-card p-5 sm:p-6">
+            <button class="faq-accordion-btn w-full text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:text-[#3A5A40] transition-colors focus-visible:outline-none touch-target" 
+                    aria-expanded="false" 
+                    aria-controls="faq-content-4">
+              <span>Como funciona o sigilo das informações?</span>
+              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-xs transition-transform duration-200 shrink-0 ml-4" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content px-5 text-sm text-[#57655B] leading-relaxed">
-              <div class="pb-5 pt-1 border-t border-gray-100">
-                O sigilo profissional é protegido por lei e pelo Código de Ética Profissional do Psicólogo. Tudo o que é conversado durante a sessão — presencial ou online — permanece estritamente confidencial.
+            <div id="faq-content-4" class="accordion-content text-sm text-[#4E5E53] leading-relaxed">
+              <div class="pt-3">
+                O sigilo profissional é rigorosamente garantido pelo Código de Ética Profissional do Psicólogo (CFP). Absolutamente tudo o que é compartilhado nas sessões presenciais ou online é mantido sob sigilo.
               </div>
             </div>
           </div>
 
           <!-- FAQ 5 -->
-          <div class="bg-[#FAF8F5] rounded-2xl border border-[#E8EFE9] overflow-hidden shadow-xs">
-            <button class="faq-accordion-btn w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:bg-[#E8EFE9]/50 transition-colors focus:outline-none touch-target" aria-expanded="false">
+          <div class="bg-white rounded-2xl border border-[#E0E8E2] soft-card p-5 sm:p-6">
+            <button class="faq-accordion-btn w-full text-left flex items-center justify-between font-heading font-semibold text-base sm:text-lg text-[#243028] hover:text-[#3A5A40] transition-colors focus-visible:outline-none touch-target" 
+                    aria-expanded="false" 
+                    aria-controls="faq-content-5">
               <span>Onde fica o consultório em Jundiaí - SP?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-sm transition-transform duration-300 shrink-0 ml-4"></i>
+              <i class="fas fa-chevron-down accordion-icon text-[#3A5A40] text-xs transition-transform duration-200 shrink-0 ml-4" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content px-5 text-sm text-[#57655B] leading-relaxed">
-              <div class="pb-5 pt-1 border-t border-gray-100">
-                O consultório fica situado na região central e nobre de Jundiaí - SP (bairro Chácara Urbana / próximo à Av. Nove de Julho). O endereço completo e instruções de chegada são enviados logo após o agendamento.
+            <div id="faq-content-5" class="accordion-content text-sm text-[#4E5E53] leading-relaxed">
+              <div class="pt-3">
+                O consultório fica na Chácara Urbana em Jundiaí - SP, próximo à Avenida Nove de Julho. O endereço completo e as orientações de chegada são enviados com a confirmação do seu horário.
               </div>
             </div>
           </div>
 
         </div>
 
-        <div class="mt-10 text-center bg-[#E8EFE9]/50 p-6 rounded-2xl border border-[#E8EFE9] reveal-on-scroll">
+        <div class="mt-10 text-center p-6 sm:p-7 rounded-2xl bg-[#EBF1EC]/60 border border-[#E0E8E2] reveal-on-scroll">
           <p class="text-sm font-semibold text-[#243028]">Ficou com alguma dúvida específica?</p>
           <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Tenho%20uma%20d%C3%BAvida%20sobre..." 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="inline-flex items-center gap-2 text-sm font-bold text-[#3A5A40] hover:underline mt-1.5 touch-target">
-            <span>Clique aqui para conversar diretamente pelo WhatsApp</span>
-            <i class="fas fa-arrow-right text-xs"></i>
+             class="inline-flex items-center gap-2 text-sm font-bold text-[#3A5A40] hover:underline mt-2 touch-target">
+            <span>Conversar diretamente no WhatsApp com a Dra. Aline</span>
+            <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
           </a>
         </div>
 
@@ -826,47 +823,39 @@
     </section>
 
     <!-- FINAL CTA / AGENDAMENTO -->
-    <section id="contato" class="py-16 md:py-24 bg-[#3A5A40] text-white relative overflow-hidden">
-      <div class="absolute -top-10 -right-10 w-96 h-96 rounded-full bg-[#588157] blur-3xl opacity-30 pointer-events-none"></div>
-      <div class="absolute -bottom-10 -left-10 w-96 h-96 rounded-full bg-[#2B4430] blur-3xl opacity-50 pointer-events-none"></div>
-
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8 reveal-on-scroll">
+    <section id="contato" class="py-16 md:py-22 px-4 sm:px-6 lg:px-8 bg-[#3A5A40] text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6 reveal-on-scroll">
         
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#588157]/40 text-emerald-100 text-xs font-semibold tracking-wide border border-white/15">
-          <i class="fas fa-heart text-[#C3775B]"></i>
-          <span>Agendamento Acolhedor</span>
-        </div>
-
-        <h2 class="font-heading font-bold leading-tight max-w-3xl mx-auto">
-          Dê o primeiro passo para ter mais leveza e autocompreensão na sua rotina.
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold leading-tight max-w-2xl mx-auto text-white">
+          Dê o primeiro passo para ter mais equilíbrio e acolhimento na sua rotina.
         </h2>
 
-        <p class="text-base sm:text-lg text-emerald-100/90 max-w-2xl mx-auto leading-relaxed">
-          Estou pronta para te acolher. Escolha o atendimento presencial em Jundiaí - SP ou online de onde você estiver.
+        <p class="text-base sm:text-lg text-[#D8E6DC] max-w-xl mx-auto leading-relaxed">
+          Estou pronta para te receber. Escolha entre o atendimento presencial em Jundiaí - SP ou online de onde você estiver.
         </p>
 
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
           <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="w-full sm:w-auto inline-flex items-center justify-center px-9 py-4 rounded-full bg-white text-[#3A5A40] font-bold text-base hover:bg-[#FAF8F5] transition-all shadow-xl gap-3 transform hover:-translate-y-0.5 touch-target">
-            <i class="fab fa-whatsapp text-2xl text-[#25D366]"></i>
-            <span>Conversar no WhatsApp</span>
+             class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-[#3A5A40] font-bold text-base hover:bg-[#FAF8F5] transition-colors shadow-md gap-3 touch-target">
+            <i class="fab fa-whatsapp text-2xl text-[#25D366]" aria-hidden="true"></i>
+            <span>Agendar pelo WhatsApp</span>
           </a>
         </div>
 
-        <div class="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-emerald-100/80 max-w-3xl mx-auto">
+        <div class="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#D8E6DC] max-w-2xl mx-auto">
           <div class="flex items-center justify-center gap-2">
-            <i class="fas fa-location-dot text-[#A3B18A]"></i>
-            <span>Jundiaí - SP (Av. 9 de Julho)</span>
+            <i class="fas fa-location-dot text-[#A3B18A]" aria-hidden="true"></i>
+            <span>Jundiaí - SP (Chácara Urbana)</span>
           </div>
           <div class="flex items-center justify-center gap-2">
-            <i class="fas fa-laptop text-[#A3B18A]"></i>
-            <span>Atendimento Online Global</span>
+            <i class="fas fa-laptop text-[#A3B18A]" aria-hidden="true"></i>
+            <span>Atendimento Online</span>
           </div>
           <div class="flex items-center justify-center gap-2">
-            <i class="fas fa-id-card text-[#A3B18A]"></i>
-            <span>CRP 06/158942</span>
+            <i class="fas fa-id-card text-[#A3B18A]" aria-hidden="true"></i>
+            <span class="tabular-nums">CRP 06/158942</span>
           </div>
         </div>
 
@@ -876,49 +865,50 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-[#243028] text-gray-300 py-12 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+  <footer class="bg-[#243028] text-gray-300 py-12 px-4 sm:px-6 lg:px-8 text-xs">
+    <div class="max-w-7xl mx-auto space-y-8">
       
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         
-        <div class="md:col-span-6 space-y-3">
+        <div class="md:col-span-6 space-y-2.5">
           <p class="font-heading text-lg font-bold text-white">Dra. Aline Duarte</p>
           <p class="text-gray-400 max-w-md leading-relaxed">
-            Psicologia Clínica com foco em acolhimento, ética e embasamento científico (TCC). Atendimento Presencial na cidade de Jundiaí - SP e Online para todo o Brasil.
+            Psicologia Clínica humanizada e embasada na Terapia Cognitivo-Comportamental (TCC). Consultas presenciais em Jundiaí - SP e atendimento online em todo o Brasil.
           </p>
-          <p class="text-gray-400">
+          <p class="text-gray-400 tabular-nums">
             <strong>Registro Profissional:</strong> CRP 06/158942
           </p>
         </div>
 
         <div class="md:col-span-3 space-y-2">
-          <p class="font-bold text-white uppercase tracking-wider text-[11px]">Navegação Rápida</p>
-          <ul class="space-y-2 text-gray-400">
+          <p class="font-bold text-white text-xs">Navegação</p>
+          <ul class="space-y-1.5 text-gray-400">
             <li><a href="#sobre" class="hover:text-white transition-colors">Sobre a Psicóloga</a></li>
             <li><a href="#demandas" class="hover:text-white transition-colors">Demandas Atendidas</a></li>
             <li><a href="#primeira-sessao" class="hover:text-white transition-colors">Primeira Sessão</a></li>
             <li><a href="#atendimento" class="hover:text-white transition-colors">Atendimento Jundiaí / Online</a></li>
+            <li><a href="#reembolso" class="hover:text-white transition-colors">Reembolso de Convênio</a></li>
             <li><a href="#faq" class="hover:text-white transition-colors">Perguntas Frequentes</a></li>
           </ul>
         </div>
 
         <div class="md:col-span-3 space-y-2">
-          <p class="font-bold text-white uppercase tracking-wider text-[11px]">Contato & Localização</p>
-          <p class="text-gray-400"><i class="fas fa-location-dot text-[#A3B18A] mr-1.5"></i> Chácara Urbana - Jundiaí / SP</p>
-          <p class="text-gray-400"><i class="fab fa-whatsapp text-[#25D366] mr-1.5"></i> (11) 99999-9999</p>
-          <p class="text-gray-400"><i class="fas fa-envelope text-[#A3B18A] mr-1.5"></i> contato@alineduartepsicologia.com.br</p>
+          <p class="font-bold text-white text-xs">Contato & Localização</p>
+          <p class="text-gray-400"><i class="fas fa-location-dot text-[#A3B18A] mr-1.5" aria-hidden="true"></i> Chácara Urbana - Jundiaí / SP</p>
+          <p class="text-gray-400 tabular-nums"><i class="fab fa-whatsapp text-[#25D366] mr-1.5" aria-hidden="true"></i> (11) 99999-9999</p>
+          <p class="text-gray-400"><i class="fas fa-envelope text-[#A3B18A] mr-1.5" aria-hidden="true"></i> contato@alineduartepsicologia.com.br</p>
         </div>
 
       </div>
 
       <!-- Ethics Disclaimer -->
-      <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-gray-400 leading-relaxed text-[11px]">
+      <div class="p-5 rounded-xl border border-white/10 text-gray-400 leading-relaxed text-xs">
         <p>
-          <strong>Aviso de Saúde Mental:</strong> Este site possui caráter meramente informativo e de apresentação profissional. Em caso de crise emocional severa ou urgência médica, busque ajuda imediata ligando para o <strong>CVV (Centro de Valorização da Vida) no telefone 188</strong> (gratuito 24h) ou dirija-se ao pronto atendimento mais próximo.
+          <strong>Aviso de Saúde Mental:</strong> Este site possui caráter informativo e de apresentação profissional. Em caso de sofrimento psíquico intenso ou crise emocional aguda, procure ajuda imediata ligando para o <strong>CVV (Centro de Valorização da Vida) no telefone 188</strong> (ligação gratuita 24h) ou dirija-se ao pronto atendimento mais próximo.
         </p>
       </div>
 
-      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-gray-500 gap-4">
+      <div class="pt-8 pb-2 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-gray-500 gap-4">
         <p>© 2026 Dra. Aline Duarte - Psicologia Clínica (CRP 06/158942). Todos os direitos reservados.</p>
         <p>Desenvolvido com ética e transparência.</p>
       </div>
@@ -926,94 +916,21 @@
     </div>
   </footer>
 
-  <!-- REEMBOLSO CONVÊNIO MODAL -->
-  <div id="reembolso-modal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <div id="reembolso-modal-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
-
-    <div class="flex items-center justify-center min-h-dvh p-4 text-center sm:p-0">
-      <div class="relative bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full border border-[#E8EFE9]">
-        
-        <!-- Header -->
-        <div class="bg-[#3A5A40] p-6 text-white flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <i class="fas fa-receipt text-2xl text-[#A3B18A]"></i>
-            <div>
-              <h3 class="font-heading text-lg font-bold">Reembolso de Consulta pelo Convênio</h3>
-              <p class="text-xs text-emerald-100">Saiba como solicitar o ressarcimento no seu plano de saúde</p>
-            </div>
-          </div>
-          <button id="close-reembolso-modal" class="text-white hover:text-emerald-200 text-xl font-bold p-2 cursor-pointer touch-target" aria-label="Fechar modal">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-
-        <!-- Modal Body -->
-        <div class="p-6 space-y-5 text-sm text-[#57655B]">
-          <p class="text-[#243028] font-medium">
-            Você sabia que a maioria dos planos de saúde garante o direito de reembolso para consultas psicológicas particulares? Veja como é simples:
-          </p>
-
-          <div class="space-y-4">
-            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E8EFE9]">
-              <span class="w-7 h-7 rounded-full bg-[#3A5A40] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
-              <div>
-                <p class="font-bold text-[#243028]">Realização & Pagamento da Consulta</p>
-                <p class="text-xs text-[#57655B]">Você realiza a consulta (presencial ou online) e faz o pagamento diretamente com a psicóloga.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E8EFE9]">
-              <span class="w-7 h-7 rounded-full bg-[#3A5A40] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
-              <div>
-                <p class="font-bold text-[#243028]">Emissão do Recibo / Nota Fiscal</p>
-                <p class="text-xs text-[#57655B]">Emito um recibo detalhado constando meu CRP, CPF/CNPJ, valor e código da sessão.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E8EFE9]">
-              <span class="w-7 h-7 rounded-full bg-[#3A5A40] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
-              <div>
-                <p class="font-bold text-[#243028]">Envio no App do seu Plano</p>
-                <p class="text-xs text-[#57655B]">Você envia a foto do recibo no aplicativo do seu convênio e recebe o valor reembolsado direto na sua conta bancária.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-[#E8EFE9]/60 p-4 rounded-xl text-xs text-[#3A5A40] font-medium border border-[#3A5A40]/10">
-            <i class="fas fa-info-circle mr-1"></i> Consulte a tabela de reembolso do seu plano de saúde antes da primeira sessão para saber o percentual ressarcido!
-          </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="bg-[#FAF8F5] px-6 py-4 flex flex-col sm:flex-row justify-end gap-3 border-t border-[#E8EFE9]">
-          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20o%20reembolso%20pelo%20conv%C3%AAnio." 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3A5A40] text-white font-semibold text-xs hover:bg-[#2B4430] transition-all gap-2 touch-target">
-            <i class="fab fa-whatsapp text-base text-[#25D366]"></i>
-            <span>Tirar Dúvidas sobre Reembolso</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
   <!-- FLOATING STICKY MOBILE BOTTOM CTA BAR -->
-  <div id="mobile-bottom-cta" class="md:hidden fixed bottom-4 inset-x-4 z-40 transform translate-y-full opacity-0 transition-all duration-400 ease-out">
-    <div class="glass-panel p-3 rounded-full shadow-2xl border border-white/80 flex items-center justify-between gap-3">
-      <div class="flex items-center gap-2.5 pl-2">
-        <div class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></div>
-        <div class="text-xs">
+  <div id="mobile-bottom-cta" class="md:hidden fixed bottom-3 inset-x-4 z-40 transform translate-y-full opacity-0 transition-all duration-300 ease-out safe-bottom" aria-label="Ação rápida de agendamento móvel">
+    <div class="glass-panel px-4 py-2.5 rounded-full shadow-lg border border-[#E0E8E2] flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-[#25D366]"></div>
+        <div class="text-xs leading-tight">
           <p class="font-bold text-[#243028]">Dra. Aline Duarte</p>
-          <p class="text-[10px] text-[#57655B]">Presencial & Online</p>
+          <p class="text-xs text-[#4E5E53]">Jundiaí & Online</p>
         </div>
       </div>
       <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
          target="_blank" 
          rel="noopener noreferrer" 
-         class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3A5A40] text-[#FFFFFF] font-semibold text-xs shadow-md gap-2 touch-target">
-        <i class="fab fa-whatsapp text-base text-[#25D366]"></i>
+         class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#3A5A40] text-white font-semibold text-xs shadow-xs gap-1.5 touch-target">
+        <i class="fab fa-whatsapp text-sm text-[#25D366]" aria-hidden="true"></i>
         <span>Agendar</span>
       </a>
     </div>
@@ -1023,9 +940,9 @@
   <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dra.%20Aline!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Jundia%C3%AD%20ou%20Online.%20Podemos%20conversar%3F" 
      target="_blank" 
      rel="noopener noreferrer" 
-     class="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all animate-pulse-glow" 
+     class="hidden md:flex fixed bottom-6 right-6 z-40 w-13 h-13 rounded-full bg-[#25D366] text-white items-center justify-center text-2xl shadow-lg hover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-all touch-target" 
      aria-label="Falar no WhatsApp com a Dra. Aline Duarte">
-    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Script JS Bundle -->
