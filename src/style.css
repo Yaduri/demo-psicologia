@@ -196,13 +196,22 @@
   opacity: 1;
 }
 
-/* Touch Target Minimum (44px floor) */
 .touch-target {
   min-height: 44px;
   min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+}
+
+/* Strict mutual exclusivity for floating contact elements */
+@media (max-width: 767.98px) {
+  #desktop-whatsapp-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #mobile-bottom-cta {
+    display: none !important;
+  }
 }
 
 /* Safe Area Inset Support */
